@@ -12,7 +12,7 @@ export function discover(onWallet:(w:Wallet)=>void){
  const receive=(e:any)=>onWallet({id:e.detail.info.uuid,name:e.detail.info.name,provider:e.detail.provider});
  window.addEventListener('eip6963:announceProvider',receive);window.dispatchEvent(new Event('eip6963:requestProvider'));
  const eth=(window as any).ethereum;
- if(eth){const providers=eth.providers??[eth];providers.forEach((p:Provider,i:number)=>onWallet({id:'legacy-'+i,name:`Browser wallet${providers.length>1?' '+(i+1):''}`,provider:p}));}
+ if(eth){const providers=Array.isArray(eth.providers)?eth.providers:[eth];providers.forEach((p:Provider,i:number)=>onWallet({id:'legacy-'+i,name:`Browser wallet${providers.length>1?' '+(i+1):''}`,provider:p}));}
  return ()=>window.removeEventListener('eip6963:announceProvider',receive);
 }
 export async function connect(w:Wallet):Promise<Connection>{
@@ -60,6 +60,6 @@ export async function poll(t:TxEntry):Promise<TxEntry>{
  if(!raw)throw Error('Receipt lacks verifiable calldata.');
  const decoded:any=abi.calldata.decode(Uint8Array.from(atob(raw),(x:string)=>x.charCodeAt(0)));
  const obj=decoded instanceof Map?Object.fromEntries(decoded):decoded;
- return {...t,...verifyReceiptIdentity(r,t,obj)};
+ return {...t,...verifyReceiptIdentity(r,t,obj),error:undefined};
 }
 export function download(name:string,obj:unknown){const blob=new Blob([JSON.stringify(obj,null,2)],{type:'application/json'});const a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download=name;a.click();setTimeout(()=>URL.revokeObjectURL(a.href),500);}

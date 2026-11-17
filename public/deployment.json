@@ -6,5 +6,6 @@
   "source_sha256": "2ff09c3b9c110ba845f2eedc19c9b107ad9690c6edc8875095ae5a372c195b37",
   "deploy_tx": "0xded063eba5b4e536506d0c65b367fd8eaa2efc981a3d0a19984e3d0df7787b18",
   "protocol": "mandateflow-1",
-  "verified_proposal": null
+  "verified_proposal": "0xcfdccbf6fd5a604d9a74fb96b336f679b9554b4a:open-harbor:0xcfdccbf6fd5a604d9a74fb96b336f679b9554b4a:testing-renewal",
+  "verified_space": "0xcfdccbf6fd5a604d9a74fb96b336f679b9554b4a:open-harbor"
 }

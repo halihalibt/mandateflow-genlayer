@@ -46,7 +46,7 @@ async function tx(label,actor,method,args,expectedFailure=false){
  return wait(e);
 }
 async function read(method,args=[]){return JSON.parse(await clients[0].readContract({address:j.contract,functionName:method,args,transactionHashVariant:'latest-final'}));}
-async function record(key,method,args){j.records[key]=await read(method,args);save();return j.records[key];}
+async function record(key,method,args){if(j.records[key])return j.records[key];j.records[key]=await read(method,args);save();return j.records[key];}
 if(!j.funded){for(const x of a)await rpc('sim_fundAccount',[x,10000]);j.funded=true;save();console.log('Funded test signers via official Studio faucet');}
 const deployed=await tx('deployment',0,'deploy',[]);
 if(!j.contract){
