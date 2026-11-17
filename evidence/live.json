@@ -1,0 +1,3470 @@
+{
+  "version": 1,
+  "network": 61999,
+  "actors": [
+    {
+      "name": "Alex",
+      "address": "0xcfdccbf6fd5a604d9a74fb96b336f679b9554b4a"
+    },
+    {
+      "name": "Rowan",
+      "address": "0x2080077b191dc78dd670771529f1577e0d4c8df4"
+    },
+    {
+      "name": "Casey",
+      "address": "0xf4c46af7b77154d148f85e6ddabf8f7d41da144e"
+    },
+    {
+      "name": "Devon",
+      "address": "0x0829340c9244d2b254ea77aec12efbba2d3afcff"
+    },
+    {
+      "name": "Emery",
+      "address": "0x70645451e6849757c77ebb82496268b2ff8e7287"
+    },
+    {
+      "name": "Finley",
+      "address": "0xda321ca5a7f1dd078c62e78bbdeb020fc1739609"
+    },
+    {
+      "name": "Gray",
+      "address": "0x76f02f2b3b30f2e2dff7a93110afc09f3990f7fc"
+    },
+    {
+      "name": "Harper",
+      "address": "0xb12b010db0457b577391cc28df1d10ec11eb1bc8"
+    }
+  ],
+  "transactions": [
+    {
+      "label": "deployment",
+      "actor": "0xcfdccbf6fd5a604d9a74fb96b336f679b9554b4a",
+      "method": "deploy",
+      "args": [],
+      "expected_failure": false,
+      "hash": "0xded063eba5b4e536506d0c65b367fd8eaa2efc981a3d0a19984e3d0df7787b18",
+      "submitted_at": "2026-11-17T07:10:00.776Z",
+      "last_status": "FINALIZED",
+      "receipt": {
+        "hash": "0xded063eba5b4e536506d0c65b367fd8eaa2efc981a3d0a19984e3d0df7787b18",
+        "statusName": "FINALIZED",
+        "txExecutionResultName": "SUCCESS",
+        "result_name": "MAJORITY_AGREE",
+        "from_address": "0xcFDCcbF6Fd5a604D9A74FB96B336f679B9554b4a",
+        "to_address": "0xAbF34de3273BDbF463Ea8d5b944D746394bd12F6",
+        "data": {
+          "contract_address": "0xAbF34de3273BDbF463Ea8d5b944D746394bd12F6"
+        },
+        "leader_only": false,
+        "leader_result": null
+      }
+    },
+    {
+      "label": "space",
+      "actor": "0xcfdccbf6fd5a604d9a74fb96b336f679b9554b4a",
+      "method": "create_space",
+      "args": [
+        "open-harbor",
+        "Open Harbor Collective",
+        "Alex"
+      ],
+      "expected_failure": false,
+      "hash": "0x1314b6d7d44a9d46f797a69fe0b3c2aad8f1d4ce42be6a60f3339a3773bb8d0f",
+      "submitted_at": "2026-11-17T07:11:53.597Z",
+      "last_status": "FINALIZED",
+      "receipt": {
+        "hash": "0x1314b6d7d44a9d46f797a69fe0b3c2aad8f1d4ce42be6a60f3339a3773bb8d0f",
+        "statusName": "FINALIZED",
+        "txExecutionResultName": "SUCCESS",
+        "result_name": "MAJORITY_AGREE",
+        "from_address": "0xcFDCcbF6Fd5a604D9A74FB96B336f679B9554b4a",
+        "to_address": "0xAbF34de3273BDbF463Ea8d5b944D746394bd12F6",
+        "data": {},
+        "leader_only": false,
+        "leader_result": null
+      }
+    },
+    {
+      "label": "invite-1",
+      "actor": "0xcfdccbf6fd5a604d9a74fb96b336f679b9554b4a",
+      "method": "invite_member",
+      "args": [
+        "0xcfdccbf6fd5a604d9a74fb96b336f679b9554b4a:open-harbor",
+        0,
+        "0x2080077b191dc78dd670771529f1577e0d4c8df4"
+      ],
+      "expected_failure": false,
+      "hash": "0xb2b3d7939422706f9387b4325a07cc5c84913a8c60d2d6c4bc18cce8a60f0694",
+      "submitted_at": "2026-11-17T07:12:47.056Z",
+      "last_status": "FINALIZED",
+      "receipt": {
+        "hash": "0xb2b3d7939422706f9387b4325a07cc5c84913a8c60d2d6c4bc18cce8a60f0694",
+        "statusName": "FINALIZED",
+        "txExecutionResultName": "SUCCESS",
+        "result_name": "MAJORITY_AGREE",
+        "from_address": "0xcFDCcbF6Fd5a604D9A74FB96B336f679B9554b4a",
+        "to_address": "0xAbF34de3273BDbF463Ea8d5b944D746394bd12F6",
+        "data": {},
+        "leader_only": false,
+        "votes": {
+          "0x174A9261a34D502212bE59deB3319508b9ff0fD7": "agree",
+          "0x29e027b307e32d2FB76825aB3cB21bcF79A433Aa": "agree",
+          "0x364A7fb8bf37b1D388c4A81B4b109d91334dC9fd": "idle",
+          "0xD2762A898b8262acB88024bf7d5Bb4336375cF22": "agree",
+          "0xc4Ab6B9D74c72EB38D43645318Bb4aFb518a09be": "idle"
+        },
+        "leader_result": {
+          "raw": "ALQDMHhjZmRjY2JmNmZkNWE2MDRkOWE3NGZiOTZiMzM2ZjY3OWI5NTU0YjRhOm9wZW4taGFyYm9y",
+          "status": "return",
+          "payload": {
+            "raw": [
+              180,
+              3,
+              48,
+              120,
+              99,
+              102,
+              100,
+              99,
+              99,
+              98,
+              102,
+              54,
+              102,
+              100,
+              53,
+              97,
+              54,
+              48,
+              52,
+              100,
+              57,
+              97,
+              55,
+              52,
+              102,
+              98,
+              57,
+              54,
+              98,
+              51,
+              51,
+              54,
+              102,
+              54,
+              55,
+              57,
+              98,
+              57,
+              53,
+              53,
+              52,
+              98,
+              52,
+              97,
+              58,
+              111,
+              112,
+              101,
+              110,
+              45,
+              104,
+              97,
+              114,
+              98,
+              111,
+              114
+            ],
+            "readable": "\"0xcfdccbf6fd5a604d9a74fb96b336f679b9554b4a:open-harbor\""
+          }
+        }
+      }
+    },
+    {
+      "label": "accept-1",
+      "actor": "0x2080077b191dc78dd670771529f1577e0d4c8df4",
+      "method": "accept_invitation",
+      "args": [
+        "0xcfdccbf6fd5a604d9a74fb96b336f679b9554b4a:open-harbor",
+        "Rowan"
+      ],
+      "expected_failure": false,
+      "hash": "0x02662951e33c490f96ee9e0011e001f39b642ed270b377d35f9d8d9c9505c0c3",
+      "submitted_at": "2026-11-17T07:13:33.467Z",
+      "last_status": "FINALIZED",
+      "receipt": {
+        "hash": "0x02662951e33c490f96ee9e0011e001f39b642ed270b377d35f9d8d9c9505c0c3",
+        "statusName": "FINALIZED",
+        "txExecutionResultName": "SUCCESS",
+        "result_name": "MAJORITY_AGREE",
+        "from_address": "0x2080077B191dC78Dd670771529F1577e0d4c8Df4",
+        "to_address": "0xAbF34de3273BDbF463Ea8d5b944D746394bd12F6",
+        "data": {},
+        "leader_only": false,
+        "votes": {
+          "0x173a86dBe046c0c6aA3A48Bb8dd9d20c001a2ac1": "idle",
+          "0x174A9261a34D502212bE59deB3319508b9ff0fD7": "agree",
+          "0x29e027b307e32d2FB76825aB3cB21bcF79A433Aa": "idle",
+          "0xeA908540c5FBB68Da844cC1BE5eaC8b23391e908": "agree",
+          "0xf20Cb474E5be2f56EA6Be925D057c28f458270da": "agree"
+        },
+        "leader_result": {
+          "raw": "ALQDMHhjZmRjY2JmNmZkNWE2MDRkOWE3NGZiOTZiMzM2ZjY3OWI5NTU0YjRhOm9wZW4taGFyYm9y",
+          "status": "return",
+          "payload": {
+            "raw": [
+              180,
+              3,
+              48,
+              120,
+              99,
+              102,
+              100,
+              99,
+              99,
+              98,
+              102,
+              54,
+              102,
+              100,
+              53,
+              97,
+              54,
+              48,
+              52,
+              100,
+              57,
+              97,
+              55,
+              52,
+              102,
+              98,
+              57,
+              54,
+              98,
+              51,
+              51,
+              54,
+              102,
+              54,
+              55,
+              57,
+              98,
+              57,
+              53,
+              53,
+              52,
+              98,
+              52,
+              97,
+              58,
+              111,
+              112,
+              101,
+              110,
+              45,
+              104,
+              97,
+              114,
+              98,
+              111,
+              114
+            ],
+            "readable": "\"0xcfdccbf6fd5a604d9a74fb96b336f679b9554b4a:open-harbor\""
+          }
+        }
+      }
+    },
+    {
+      "label": "invite-2",
+      "actor": "0xcfdccbf6fd5a604d9a74fb96b336f679b9554b4a",
+      "method": "invite_member",
+      "args": [
+        "0xcfdccbf6fd5a604d9a74fb96b336f679b9554b4a:open-harbor",
+        2,
+        "0xf4c46af7b77154d148f85e6ddabf8f7d41da144e"
+      ],
+      "expected_failure": false,
+      "hash": "0xce34a07c2413e3fe3fafa93df2ac3c1b5fbaa2284e578c07428db4a0b0e43468",
+      "submitted_at": "2026-11-17T07:14:09.266Z",
+      "last_status": "FINALIZED",
+      "receipt": {
+        "hash": "0xce34a07c2413e3fe3fafa93df2ac3c1b5fbaa2284e578c07428db4a0b0e43468",
+        "statusName": "FINALIZED",
+        "txExecutionResultName": "SUCCESS",
+        "result_name": "MAJORITY_AGREE",
+        "from_address": "0xcFDCcbF6Fd5a604D9A74FB96B336f679B9554b4a",
+        "to_address": "0xAbF34de3273BDbF463Ea8d5b944D746394bd12F6",
+        "data": {},
+        "leader_only": false,
+        "votes": {
+          "0x0533e32Ae90B9065476eB89C2Bb655eCD98764BD": "idle",
+          "0x173a86dBe046c0c6aA3A48Bb8dd9d20c001a2ac1": "agree",
+          "0x5D4dD8d9f034c2fC742A1bE9C6d71D985d4D5Ac4": "agree",
+          "0x7eFf7A59cf5cF0aA88817b5683d3F99caac1D4F9": "idle",
+          "0xB64c3Fa67e1f33aA1EFc721B7Ac763f2070fCcA3": "agree"
+        },
+        "leader_result": {
+          "raw": "ALQDMHhjZmRjY2JmNmZkNWE2MDRkOWE3NGZiOTZiMzM2ZjY3OWI5NTU0YjRhOm9wZW4taGFyYm9y",
+          "status": "return",
+          "payload": {
+            "raw": [
+              180,
+              3,
+              48,
+              120,
+              99,
+              102,
+              100,
+              99,
+              99,
+              98,
+              102,
+              54,
+              102,
+              100,
+              53,
+              97,
+              54,
+              48,
+              52,
+              100,
+              57,
+              97,
+              55,
+              52,
+              102,
+              98,
+              57,
+              54,
+              98,
+              51,
+              51,
+              54,
+              102,
+              54,
+              55,
+              57,
+              98,
+              57,
+              53,
+              53,
+              52,
+              98,
+              52,
+              97,
+              58,
+              111,
+              112,
+              101,
+              110,
+              45,
+              104,
+              97,
+              114,
+              98,
+              111,
+              114
+            ],
+            "readable": "\"0xcfdccbf6fd5a604d9a74fb96b336f679b9554b4a:open-harbor\""
+          }
+        }
+      }
+    },
+    {
+      "label": "accept-2",
+      "actor": "0xf4c46af7b77154d148f85e6ddabf8f7d41da144e",
+      "method": "accept_invitation",
+      "args": [
+        "0xcfdccbf6fd5a604d9a74fb96b336f679b9554b4a:open-harbor",
+        "Casey"
+      ],
+      "expected_failure": false,
+      "hash": "0x41ec1f62b0e701983d4a7cf8f2acd721fd66967c9ae08a898ffa5ecc1c4f894f",
+      "submitted_at": "2026-11-17T07:14:55.713Z",
+      "last_status": "FINALIZED",
+      "receipt": {
+        "hash": "0x41ec1f62b0e701983d4a7cf8f2acd721fd66967c9ae08a898ffa5ecc1c4f894f",
+        "statusName": "FINALIZED",
+        "txExecutionResultName": "SUCCESS",
+        "result_name": "MAJORITY_AGREE",
+        "from_address": "0xf4c46af7b77154d148f85e6dDabf8F7d41da144e",
+        "to_address": "0xAbF34de3273BDbF463Ea8d5b944D746394bd12F6",
+        "data": {},
+        "leader_only": false,
+        "votes": {
+          "0x364A7fb8bf37b1D388c4A81B4b109d91334dC9fd": "agree",
+          "0x628f4d491b8753Be1eD022f6D920853b8b541937": "agree",
+          "0x7eFf7A59cf5cF0aA88817b5683d3F99caac1D4F9": "idle",
+          "0xB64c3Fa67e1f33aA1EFc721B7Ac763f2070fCcA3": "agree",
+          "0xf298378Fba762Ebf0cDf0c3dA90C33E730e1CdC3": "idle"
+        },
+        "leader_result": {
+          "raw": "ALQDMHhjZmRjY2JmNmZkNWE2MDRkOWE3NGZiOTZiMzM2ZjY3OWI5NTU0YjRhOm9wZW4taGFyYm9y",
+          "status": "return",
+          "payload": {
+            "raw": [
+              180,
+              3,
+              48,
+              120,
+              99,
+              102,
+              100,
+              99,
+              99,
+              98,
+              102,
+              54,
+              102,
+              100,
+              53,
+              97,
+              54,
+              48,
+              52,
+              100,
+              57,
+              97,
+              55,
+              52,
+              102,
+              98,
+              57,
+              54,
+              98,
+              51,
+              51,
+              54,
+              102,
+              54,
+              55,
+              57,
+              98,
+              57,
+              53,
+              53,
+              52,
+              98,
+              52,
+              97,
+              58,
+              111,
+              112,
+              101,
+              110,
+              45,
+              104,
+              97,
+              114,
+              98,
+              111,
+              114
+            ],
+            "readable": "\"0xcfdccbf6fd5a604d9a74fb96b336f679b9554b4a:open-harbor\""
+          }
+        }
+      }
+    },
+    {
+      "label": "invite-3",
+      "actor": "0xcfdccbf6fd5a604d9a74fb96b336f679b9554b4a",
+      "method": "invite_member",
+      "args": [
+        "0xcfdccbf6fd5a604d9a74fb96b336f679b9554b4a:open-harbor",
+        4,
+        "0x0829340c9244d2b254ea77aec12efbba2d3afcff"
+      ],
+      "expected_failure": false,
+      "hash": "0x45dac2cac009a4bd9371da2f6652a80804ef3ac55c405618462f31d6a5366331",
+      "submitted_at": "2026-11-17T07:15:39.534Z",
+      "last_status": "FINALIZED",
+      "receipt": {
+        "hash": "0x45dac2cac009a4bd9371da2f6652a80804ef3ac55c405618462f31d6a5366331",
+        "statusName": "FINALIZED",
+        "txExecutionResultName": "SUCCESS",
+        "result_name": "MAJORITY_AGREE",
+        "from_address": "0xcFDCcbF6Fd5a604D9A74FB96B336f679B9554b4a",
+        "to_address": "0xAbF34de3273BDbF463Ea8d5b944D746394bd12F6",
+        "data": {},
+        "leader_only": false,
+        "votes": {
+          "0x628f4d491b8753Be1eD022f6D920853b8b541937": "idle",
+          "0xCCE41534BAa355c2C268Ebd9EFE4a9D395cd659B": "idle",
+          "0xE826F4232546894b7F1C6939309f22334de6d68a": "agree",
+          "0xc4Ab6B9D74c72EB38D43645318Bb4aFb518a09be": "agree",
+          "0xf20Cb474E5be2f56EA6Be925D057c28f458270da": "agree"
+        },
+        "leader_result": {
+          "raw": "ALQDMHhjZmRjY2JmNmZkNWE2MDRkOWE3NGZiOTZiMzM2ZjY3OWI5NTU0YjRhOm9wZW4taGFyYm9y",
+          "status": "return",
+          "payload": {
+            "raw": [
+              180,
+              3,
+              48,
+              120,
+              99,
+              102,
+              100,
+              99,
+              99,
+              98,
+              102,
+              54,
+              102,
+              100,
+              53,
+              97,
+              54,
+              48,
+              52,
+              100,
+              57,
+              97,
+              55,
+              52,
+              102,
+              98,
+              57,
+              54,
+              98,
+              51,
+              51,
+              54,
+              102,
+              54,
+              55,
+              57,
+              98,
+              57,
+              53,
+              53,
+              52,
+              98,
+              52,
+              97,
+              58,
+              111,
+              112,
+              101,
+              110,
+              45,
+              104,
+              97,
+              114,
+              98,
+              111,
+              114
+            ],
+            "readable": "\"0xcfdccbf6fd5a604d9a74fb96b336f679b9554b4a:open-harbor\""
+          }
+        }
+      }
+    },
+    {
+      "label": "accept-3",
+      "actor": "0x0829340c9244d2b254ea77aec12efbba2d3afcff",
+      "method": "accept_invitation",
+      "args": [
+        "0xcfdccbf6fd5a604d9a74fb96b336f679b9554b4a:open-harbor",
+        "Devon"
+      ],
+      "expected_failure": false,
+      "hash": "0xc35081d267f6264b3bbe40cc6d64da3d24985d8de5a69880c4b7661ca0acd263",
+      "submitted_at": "2026-11-17T07:16:26.002Z",
+      "last_status": "FINALIZED",
+      "receipt": {
+        "hash": "0xc35081d267f6264b3bbe40cc6d64da3d24985d8de5a69880c4b7661ca0acd263",
+        "statusName": "FINALIZED",
+        "txExecutionResultName": "SUCCESS",
+        "result_name": "MAJORITY_AGREE",
+        "from_address": "0x0829340C9244D2B254Ea77aeC12EfBbA2d3AfCFf",
+        "to_address": "0xAbF34de3273BDbF463Ea8d5b944D746394bd12F6",
+        "data": {},
+        "leader_only": false,
+        "votes": {
+          "0x0533e32Ae90B9065476eB89C2Bb655eCD98764BD": "idle",
+          "0x173a86dBe046c0c6aA3A48Bb8dd9d20c001a2ac1": "agree",
+          "0x5D4dD8d9f034c2fC742A1bE9C6d71D985d4D5Ac4": "idle",
+          "0xD2762A898b8262acB88024bf7d5Bb4336375cF22": "agree",
+          "0xeA908540c5FBB68Da844cC1BE5eaC8b23391e908": "agree"
+        },
+        "leader_result": {
+          "raw": "ALQDMHhjZmRjY2JmNmZkNWE2MDRkOWE3NGZiOTZiMzM2ZjY3OWI5NTU0YjRhOm9wZW4taGFyYm9y",
+          "status": "return",
+          "payload": {
+            "raw": [
+              180,
+              3,
+              48,
+              120,
+              99,
+              102,
+              100,
+              99,
+              99,
+              98,
+              102,
+              54,
+              102,
+              100,
+              53,
+              97,
+              54,
+              48,
+              52,
+              100,
+              57,
+              97,
+              55,
+              52,
+              102,
+              98,
+              57,
+              54,
+              98,
+              51,
+              51,
+              54,
+              102,
+              54,
+              55,
+              57,
+              98,
+              57,
+              53,
+              53,
+              52,
+              98,
+              52,
+              97,
+              58,
+              111,
+              112,
+              101,
+              110,
+              45,
+              104,
+              97,
+              114,
+              98,
+              111,
+              114
+            ],
+            "readable": "\"0xcfdccbf6fd5a604d9a74fb96b336f679b9554b4a:open-harbor\""
+          }
+        }
+      }
+    },
+    {
+      "label": "invite-4",
+      "actor": "0xcfdccbf6fd5a604d9a74fb96b336f679b9554b4a",
+      "method": "invite_member",
+      "args": [
+        "0xcfdccbf6fd5a604d9a74fb96b336f679b9554b4a:open-harbor",
+        6,
+        "0x70645451e6849757c77ebb82496268b2ff8e7287"
+      ],
+      "expected_failure": false,
+      "hash": "0xd385bb7a4d18a2d7716fb29c0a713ea4e2aef8eb52cda96ea3880e7879a827b4",
+      "submitted_at": "2026-11-17T07:17:13.420Z",
+      "last_status": "FINALIZED",
+      "receipt": {
+        "hash": "0xd385bb7a4d18a2d7716fb29c0a713ea4e2aef8eb52cda96ea3880e7879a827b4",
+        "statusName": "FINALIZED",
+        "txExecutionResultName": "SUCCESS",
+        "result_name": "MAJORITY_AGREE",
+        "from_address": "0xcFDCcbF6Fd5a604D9A74FB96B336f679B9554b4a",
+        "to_address": "0xAbF34de3273BDbF463Ea8d5b944D746394bd12F6",
+        "data": {},
+        "leader_only": false,
+        "votes": {
+          "0x628f4d491b8753Be1eD022f6D920853b8b541937": "agree",
+          "0x7d74A02562B3C443A6b12FE7996Bc5c9A578554E": "agree",
+          "0xCCE41534BAa355c2C268Ebd9EFE4a9D395cd659B": "idle",
+          "0xDc5B687ca37c3C65a16Dd456e6Ce4CF8Be2FfC9d": "idle",
+          "0xf20Cb474E5be2f56EA6Be925D057c28f458270da": "agree"
+        },
+        "leader_result": {
+          "raw": "ALQDMHhjZmRjY2JmNmZkNWE2MDRkOWE3NGZiOTZiMzM2ZjY3OWI5NTU0YjRhOm9wZW4taGFyYm9y",
+          "status": "return",
+          "payload": {
+            "raw": [
+              180,
+              3,
+              48,
+              120,
+              99,
+              102,
+              100,
+              99,
+              99,
+              98,
+              102,
+              54,
+              102,
+              100,
+              53,
+              97,
+              54,
+              48,
+              52,
+              100,
+              57,
+              97,
+              55,
+              52,
+              102,
+              98,
+              57,
+              54,
+              98,
+              51,
+              51,
+              54,
+              102,
+              54,
+              55,
+              57,
+              98,
+              57,
+              53,
+              53,
+              52,
+              98,
+              52,
+              97,
+              58,
+              111,
+              112,
+              101,
+              110,
+              45,
+              104,
+              97,
+              114,
+              98,
+              111,
+              114
+            ],
+            "readable": "\"0xcfdccbf6fd5a604d9a74fb96b336f679b9554b4a:open-harbor\""
+          }
+        }
+      }
+    },
+    {
+      "label": "accept-4",
+      "actor": "0x70645451e6849757c77ebb82496268b2ff8e7287",
+      "method": "accept_invitation",
+      "args": [
+        "0xcfdccbf6fd5a604d9a74fb96b336f679b9554b4a:open-harbor",
+        "Emery"
+      ],
+      "expected_failure": false,
+      "hash": "0xbade9d53a96add900081d5f3bf66ba7f6ffd407383ea58f3a50037448722b186",
+      "submitted_at": "2026-11-17T07:17:59.703Z",
+      "last_status": "FINALIZED",
+      "receipt": {
+        "hash": "0xbade9d53a96add900081d5f3bf66ba7f6ffd407383ea58f3a50037448722b186",
+        "statusName": "FINALIZED",
+        "txExecutionResultName": "SUCCESS",
+        "result_name": "MAJORITY_AGREE",
+        "from_address": "0x70645451e6849757c77eBB82496268b2fF8E7287",
+        "to_address": "0xAbF34de3273BDbF463Ea8d5b944D746394bd12F6",
+        "data": {},
+        "leader_only": false,
+        "votes": {
+          "0x173a86dBe046c0c6aA3A48Bb8dd9d20c001a2ac1": "agree",
+          "0x628f4d491b8753Be1eD022f6D920853b8b541937": "agree",
+          "0x7eFf7A59cf5cF0aA88817b5683d3F99caac1D4F9": "idle",
+          "0xDc5B687ca37c3C65a16Dd456e6Ce4CF8Be2FfC9d": "idle",
+          "0xeA908540c5FBB68Da844cC1BE5eaC8b23391e908": "agree"
+        },
+        "leader_result": {
+          "raw": "ALQDMHhjZmRjY2JmNmZkNWE2MDRkOWE3NGZiOTZiMzM2ZjY3OWI5NTU0YjRhOm9wZW4taGFyYm9y",
+          "status": "return",
+          "payload": {
+            "raw": [
+              180,
+              3,
+              48,
+              120,
+              99,
+              102,
+              100,
+              99,
+              99,
+              98,
+              102,
+              54,
+              102,
+              100,
+              53,
+              97,
+              54,
+              48,
+              52,
+              100,
+              57,
+              97,
+              55,
+              52,
+              102,
+              98,
+              57,
+              54,
+              98,
+              51,
+              51,
+              54,
+              102,
+              54,
+              55,
+              57,
+              98,
+              57,
+              53,
+              53,
+              52,
+              98,
+              52,
+              97,
+              58,
+              111,
+              112,
+              101,
+              110,
+              45,
+              104,
+              97,
+              114,
+              98,
+              111,
+              114
+            ],
+            "readable": "\"0xcfdccbf6fd5a604d9a74fb96b336f679b9554b4a:open-harbor\""
+          }
+        }
+      }
+    },
+    {
+      "label": "invite-5",
+      "actor": "0xcfdccbf6fd5a604d9a74fb96b336f679b9554b4a",
+      "method": "invite_member",
+      "args": [
+        "0xcfdccbf6fd5a604d9a74fb96b336f679b9554b4a:open-harbor",
+        8,
+        "0xda321ca5a7f1dd078c62e78bbdeb020fc1739609"
+      ],
+      "expected_failure": false,
+      "hash": "0x3bf8866c2e4bd184d6d83891ff9856c9e648ee26d4d9512ae240402c28976f57",
+      "submitted_at": "2026-11-17T07:18:46.710Z",
+      "last_status": "FINALIZED",
+      "receipt": {
+        "hash": "0x3bf8866c2e4bd184d6d83891ff9856c9e648ee26d4d9512ae240402c28976f57",
+        "statusName": "FINALIZED",
+        "txExecutionResultName": "SUCCESS",
+        "result_name": "MAJORITY_AGREE",
+        "from_address": "0xcFDCcbF6Fd5a604D9A74FB96B336f679B9554b4a",
+        "to_address": "0xAbF34de3273BDbF463Ea8d5b944D746394bd12F6",
+        "data": {},
+        "leader_only": false,
+        "votes": {
+          "0x364A7fb8bf37b1D388c4A81B4b109d91334dC9fd": "agree",
+          "0x7d74A02562B3C443A6b12FE7996Bc5c9A578554E": "idle",
+          "0xDc3C84a9Bc42d0b91219c27B00bbbA8CA0F0259A": "agree",
+          "0xd608c9ABb63F1776c7F0EE447194d8D7ea441b8b": "idle",
+          "0xeA908540c5FBB68Da844cC1BE5eaC8b23391e908": "agree"
+        },
+        "leader_result": {
+          "raw": "ALQDMHhjZmRjY2JmNmZkNWE2MDRkOWE3NGZiOTZiMzM2ZjY3OWI5NTU0YjRhOm9wZW4taGFyYm9y",
+          "status": "return",
+          "payload": {
+            "raw": [
+              180,
+              3,
+              48,
+              120,
+              99,
+              102,
+              100,
+              99,
+              99,
+              98,
+              102,
+              54,
+              102,
+              100,
+              53,
+              97,
+              54,
+              48,
+              52,
+              100,
+              57,
+              97,
+              55,
+              52,
+              102,
+              98,
+              57,
+              54,
+              98,
+              51,
+              51,
+              54,
+              102,
+              54,
+              55,
+              57,
+              98,
+              57,
+              53,
+              53,
+              52,
+              98,
+              52,
+              97,
+              58,
+              111,
+              112,
+              101,
+              110,
+              45,
+              104,
+              97,
+              114,
+              98,
+              111,
+              114
+            ],
+            "readable": "\"0xcfdccbf6fd5a604d9a74fb96b336f679b9554b4a:open-harbor\""
+          }
+        }
+      }
+    },
+    {
+      "label": "accept-5",
+      "actor": "0xda321ca5a7f1dd078c62e78bbdeb020fc1739609",
+      "method": "accept_invitation",
+      "args": [
+        "0xcfdccbf6fd5a604d9a74fb96b336f679b9554b4a:open-harbor",
+        "Finley"
+      ],
+      "expected_failure": false,
+      "hash": "0xa8fe364b6bcf6e73af680d40aef9b9ef5e50585b744f158112549dbe6ac8c044",
+      "submitted_at": "2026-11-17T07:19:32.960Z",
+      "last_status": "FINALIZED",
+      "receipt": {
+        "hash": "0xa8fe364b6bcf6e73af680d40aef9b9ef5e50585b744f158112549dbe6ac8c044",
+        "statusName": "FINALIZED",
+        "txExecutionResultName": "SUCCESS",
+        "result_name": "MAJORITY_AGREE",
+        "from_address": "0xda321cA5A7F1dd078C62e78BBdEb020FC1739609",
+        "to_address": "0xAbF34de3273BDbF463Ea8d5b944D746394bd12F6",
+        "data": {},
+        "leader_only": false,
+        "votes": {
+          "0x174A9261a34D502212bE59deB3319508b9ff0fD7": "agree",
+          "0x7eFf7A59cf5cF0aA88817b5683d3F99caac1D4F9": "idle",
+          "0xB64c3Fa67e1f33aA1EFc721B7Ac763f2070fCcA3": "agree",
+          "0xCCE41534BAa355c2C268Ebd9EFE4a9D395cd659B": "agree",
+          "0xD2762A898b8262acB88024bf7d5Bb4336375cF22": "idle"
+        },
+        "leader_result": {
+          "raw": "ALQDMHhjZmRjY2JmNmZkNWE2MDRkOWE3NGZiOTZiMzM2ZjY3OWI5NTU0YjRhOm9wZW4taGFyYm9y",
+          "status": "return",
+          "payload": {
+            "raw": [
+              180,
+              3,
+              48,
+              120,
+              99,
+              102,
+              100,
+              99,
+              99,
+              98,
+              102,
+              54,
+              102,
+              100,
+              53,
+              97,
+              54,
+              48,
+              52,
+              100,
+              57,
+              97,
+              55,
+              52,
+              102,
+              98,
+              57,
+              54,
+              98,
+              51,
+              51,
+              54,
+              102,
+              54,
+              55,
+              57,
+              98,
+              57,
+              53,
+              53,
+              52,
+              98,
+              52,
+              97,
+              58,
+              111,
+              112,
+              101,
+              110,
+              45,
+              104,
+              97,
+              114,
+              98,
+              111,
+              114
+            ],
+            "readable": "\"0xcfdccbf6fd5a604d9a74fb96b336f679b9554b4a:open-harbor\""
+          }
+        }
+      }
+    },
+    {
+      "label": "invite-6",
+      "actor": "0xcfdccbf6fd5a604d9a74fb96b336f679b9554b4a",
+      "method": "invite_member",
+      "args": [
+        "0xcfdccbf6fd5a604d9a74fb96b336f679b9554b4a:open-harbor",
+        10,
+        "0x76f02f2b3b30f2e2dff7a93110afc09f3990f7fc"
+      ],
+      "expected_failure": false,
+      "hash": "0xd2a3410fac97ff571d88917bcf80ed6dcd1055b095e05cde9413359dc911182e",
+      "submitted_at": "2026-11-17T07:20:16.394Z",
+      "last_status": "FINALIZED",
+      "receipt": {
+        "hash": "0xd2a3410fac97ff571d88917bcf80ed6dcd1055b095e05cde9413359dc911182e",
+        "statusName": "FINALIZED",
+        "txExecutionResultName": "SUCCESS",
+        "result_name": "MAJORITY_AGREE",
+        "from_address": "0xcFDCcbF6Fd5a604D9A74FB96B336f679B9554b4a",
+        "to_address": "0xAbF34de3273BDbF463Ea8d5b944D746394bd12F6",
+        "data": {},
+        "leader_only": false,
+        "votes": {
+          "0x173a86dBe046c0c6aA3A48Bb8dd9d20c001a2ac1": "idle",
+          "0xD2762A898b8262acB88024bf7d5Bb4336375cF22": "agree",
+          "0xDc3C84a9Bc42d0b91219c27B00bbbA8CA0F0259A": "idle",
+          "0xd608c9ABb63F1776c7F0EE447194d8D7ea441b8b": "agree",
+          "0xf20Cb474E5be2f56EA6Be925D057c28f458270da": "agree"
+        },
+        "leader_result": {
+          "raw": "ALQDMHhjZmRjY2JmNmZkNWE2MDRkOWE3NGZiOTZiMzM2ZjY3OWI5NTU0YjRhOm9wZW4taGFyYm9y",
+          "status": "return",
+          "payload": {
+            "raw": [
+              180,
+              3,
+              48,
+              120,
+              99,
+              102,
+              100,
+              99,
+              99,
+              98,
+              102,
+              54,
+              102,
+              100,
+              53,
+              97,
+              54,
+              48,
+              52,
+              100,
+              57,
+              97,
+              55,
+              52,
+              102,
+              98,
+              57,
+              54,
+              98,
+              51,
+              51,
+              54,
+              102,
+              54,
+              55,
+              57,
+              98,
+              57,
+              53,
+              53,
+              52,
+              98,
+              52,
+              97,
+              58,
+              111,
+              112,
+              101,
+              110,
+              45,
+              104,
+              97,
+              114,
+              98,
+              111,
+              114
+            ],
+            "readable": "\"0xcfdccbf6fd5a604d9a74fb96b336f679b9554b4a:open-harbor\""
+          }
+        }
+      }
+    },
+    {
+      "label": "accept-6",
+      "actor": "0x76f02f2b3b30f2e2dff7a93110afc09f3990f7fc",
+      "method": "accept_invitation",
+      "args": [
+        "0xcfdccbf6fd5a604d9a74fb96b336f679b9554b4a:open-harbor",
+        "Gray"
+      ],
+      "expected_failure": false,
+      "hash": "0x48df9a0d47fb0acee33359971f52f5f08286b46c8554017b47957db414e2ff5f",
+      "submitted_at": "2026-11-17T07:20:51.042Z",
+      "last_status": "FINALIZED",
+      "receipt": {
+        "hash": "0x48df9a0d47fb0acee33359971f52f5f08286b46c8554017b47957db414e2ff5f",
+        "statusName": "FINALIZED",
+        "txExecutionResultName": "SUCCESS",
+        "result_name": "MAJORITY_AGREE",
+        "from_address": "0x76F02f2B3B30F2e2DFF7A93110Afc09F3990F7FC",
+        "to_address": "0xAbF34de3273BDbF463Ea8d5b944D746394bd12F6",
+        "data": {},
+        "leader_only": false,
+        "votes": {
+          "0x0533e32Ae90B9065476eB89C2Bb655eCD98764BD": "agree",
+          "0x5D4dD8d9f034c2fC742A1bE9C6d71D985d4D5Ac4": "idle",
+          "0xc4Ab6B9D74c72EB38D43645318Bb4aFb518a09be": "agree",
+          "0xeA908540c5FBB68Da844cC1BE5eaC8b23391e908": "idle",
+          "0xf20Cb474E5be2f56EA6Be925D057c28f458270da": "agree"
+        },
+        "leader_result": {
+          "raw": "ALQDMHhjZmRjY2JmNmZkNWE2MDRkOWE3NGZiOTZiMzM2ZjY3OWI5NTU0YjRhOm9wZW4taGFyYm9y",
+          "status": "return",
+          "payload": {
+            "raw": [
+              180,
+              3,
+              48,
+              120,
+              99,
+              102,
+              100,
+              99,
+              99,
+              98,
+              102,
+              54,
+              102,
+              100,
+              53,
+              97,
+              54,
+              48,
+              52,
+              100,
+              57,
+              97,
+              55,
+              52,
+              102,
+              98,
+              57,
+              54,
+              98,
+              51,
+              51,
+              54,
+              102,
+              54,
+              55,
+              57,
+              98,
+              57,
+              53,
+              53,
+              52,
+              98,
+              52,
+              97,
+              58,
+              111,
+              112,
+              101,
+              110,
+              45,
+              104,
+              97,
+              114,
+              98,
+              111,
+              114
+            ],
+            "readable": "\"0xcfdccbf6fd5a604d9a74fb96b336f679b9554b4a:open-harbor\""
+          }
+        }
+      }
+    },
+    {
+      "label": "invite-7",
+      "actor": "0xcfdccbf6fd5a604d9a74fb96b336f679b9554b4a",
+      "method": "invite_member",
+      "args": [
+        "0xcfdccbf6fd5a604d9a74fb96b336f679b9554b4a:open-harbor",
+        12,
+        "0xb12b010db0457b577391cc28df1d10ec11eb1bc8"
+      ],
+      "expected_failure": false,
+      "hash": "0xf51b531224ed19b024197ac441cca0984420e7c9cc2a296421b8802dd8a0f17e",
+      "submitted_at": "2026-11-17T07:21:27.150Z",
+      "last_status": "FINALIZED",
+      "receipt": {
+        "hash": "0xf51b531224ed19b024197ac441cca0984420e7c9cc2a296421b8802dd8a0f17e",
+        "statusName": "FINALIZED",
+        "txExecutionResultName": "SUCCESS",
+        "result_name": "MAJORITY_AGREE",
+        "from_address": "0xcFDCcbF6Fd5a604D9A74FB96B336f679B9554b4a",
+        "to_address": "0xAbF34de3273BDbF463Ea8d5b944D746394bd12F6",
+        "data": {},
+        "leader_only": false,
+        "votes": {
+          "0x0533e32Ae90B9065476eB89C2Bb655eCD98764BD": "agree",
+          "0xB64c3Fa67e1f33aA1EFc721B7Ac763f2070fCcA3": "idle",
+          "0xD2762A898b8262acB88024bf7d5Bb4336375cF22": "idle",
+          "0xE826F4232546894b7F1C6939309f22334de6d68a": "agree",
+          "0xeA908540c5FBB68Da844cC1BE5eaC8b23391e908": "agree"
+        },
+        "leader_result": {
+          "raw": "ALQDMHhjZmRjY2JmNmZkNWE2MDRkOWE3NGZiOTZiMzM2ZjY3OWI5NTU0YjRhOm9wZW4taGFyYm9y",
+          "status": "return",
+          "payload": {
+            "raw": [
+              180,
+              3,
+              48,
+              120,
+              99,
+              102,
+              100,
+              99,
+              99,
+              98,
+              102,
+              54,
+              102,
+              100,
+              53,
+              97,
+              54,
+              48,
+              52,
+              100,
+              57,
+              97,
+              55,
+              52,
+              102,
+              98,
+              57,
+              54,
+              98,
+              51,
+              51,
+              54,
+              102,
+              54,
+              55,
+              57,
+              98,
+              57,
+              53,
+              53,
+              52,
+              98,
+              52,
+              97,
+              58,
+              111,
+              112,
+              101,
+              110,
+              45,
+              104,
+              97,
+              114,
+              98,
+              111,
+              114
+            ],
+            "readable": "\"0xcfdccbf6fd5a604d9a74fb96b336f679b9554b4a:open-harbor\""
+          }
+        }
+      }
+    },
+    {
+      "label": "accept-7",
+      "actor": "0xb12b010db0457b577391cc28df1d10ec11eb1bc8",
+      "method": "accept_invitation",
+      "args": [
+        "0xcfdccbf6fd5a604d9a74fb96b336f679b9554b4a:open-harbor",
+        "Harper"
+      ],
+      "expected_failure": false,
+      "hash": "0x445f2eaeb901a34ccd14074dc94126de7c2b63f69fb14123c8480d1190f4eaa5",
+      "submitted_at": "2026-11-17T07:22:13.375Z",
+      "last_status": "FINALIZED",
+      "receipt": {
+        "hash": "0x445f2eaeb901a34ccd14074dc94126de7c2b63f69fb14123c8480d1190f4eaa5",
+        "statusName": "FINALIZED",
+        "txExecutionResultName": "SUCCESS",
+        "result_name": "MAJORITY_AGREE",
+        "from_address": "0xb12B010DB0457b577391cC28df1D10Ec11Eb1Bc8",
+        "to_address": "0xAbF34de3273BDbF463Ea8d5b944D746394bd12F6",
+        "data": {},
+        "leader_only": false,
+        "votes": {
+          "0x173a86dBe046c0c6aA3A48Bb8dd9d20c001a2ac1": "idle",
+          "0x364A7fb8bf37b1D388c4A81B4b109d91334dC9fd": "agree",
+          "0xE826F4232546894b7F1C6939309f22334de6d68a": "agree",
+          "0xf20Cb474E5be2f56EA6Be925D057c28f458270da": "agree",
+          "0xf298378Fba762Ebf0cDf0c3dA90C33E730e1CdC3": "idle"
+        },
+        "leader_result": {
+          "raw": "ALQDMHhjZmRjY2JmNmZkNWE2MDRkOWE3NGZiOTZiMzM2ZjY3OWI5NTU0YjRhOm9wZW4taGFyYm9y",
+          "status": "return",
+          "payload": {
+            "raw": [
+              180,
+              3,
+              48,
+              120,
+              99,
+              102,
+              100,
+              99,
+              99,
+              98,
+              102,
+              54,
+              102,
+              100,
+              53,
+              97,
+              54,
+              48,
+              52,
+              100,
+              57,
+              97,
+              55,
+              52,
+              102,
+              98,
+              57,
+              54,
+              98,
+              51,
+              51,
+              54,
+              102,
+              54,
+              55,
+              57,
+              98,
+              57,
+              53,
+              53,
+              52,
+              98,
+              52,
+              97,
+              58,
+              111,
+              112,
+              101,
+              110,
+              45,
+              104,
+              97,
+              114,
+              98,
+              111,
+              114
+            ],
+            "readable": "\"0xcfdccbf6fd5a604d9a74fb96b336f679b9554b4a:open-harbor\""
+          }
+        }
+      }
+    },
+    {
+      "label": "mandate-0",
+      "actor": "0xcfdccbf6fd5a604d9a74fb96b336f679b9554b4a",
+      "method": "set_mandate",
+      "args": [
+        "0xcfdccbf6fd5a604d9a74fb96b336f679b9554b4a:open-harbor",
+        14,
+        "{\"to\":\"0x2080077b191dc78dd670771529f1577e0d4c8df4\",\"allow\":[\"Renewal of monthly automated testing infrastructure and routine software maintenance services.\"],\"exclude\":[\"Personnel appointments or removals.\"],\"max_hops\":2}"
+      ],
+      "expected_failure": false,
+      "hash": "0x4038027cb8e36ff4c1b90270b8a2d1a7977ce76af1970c8d70bf08b4e159712a",
+      "submitted_at": "2026-11-17T07:22:59.432Z",
+      "last_status": "FINALIZED",
+      "receipt": {
+        "hash": "0x4038027cb8e36ff4c1b90270b8a2d1a7977ce76af1970c8d70bf08b4e159712a",
+        "statusName": "FINALIZED",
+        "txExecutionResultName": "SUCCESS",
+        "result_name": "MAJORITY_AGREE",
+        "from_address": "0xcFDCcbF6Fd5a604D9A74FB96B336f679B9554b4a",
+        "to_address": "0xAbF34de3273BDbF463Ea8d5b944D746394bd12F6",
+        "data": {},
+        "leader_only": false,
+        "votes": {
+          "0x173a86dBe046c0c6aA3A48Bb8dd9d20c001a2ac1": "agree",
+          "0x174A9261a34D502212bE59deB3319508b9ff0fD7": "agree",
+          "0x29e027b307e32d2FB76825aB3cB21bcF79A433Aa": "agree",
+          "0xE826F4232546894b7F1C6939309f22334de6d68a": "idle",
+          "0xc4Ab6B9D74c72EB38D43645318Bb4aFb518a09be": "idle"
+        },
+        "leader_result": {
+          "raw": "ALQDMHhjZmRjY2JmNmZkNWE2MDRkOWE3NGZiOTZiMzM2ZjY3OWI5NTU0YjRhOm9wZW4taGFyYm9y",
+          "status": "return",
+          "payload": {
+            "raw": [
+              180,
+              3,
+              48,
+              120,
+              99,
+              102,
+              100,
+              99,
+              99,
+              98,
+              102,
+              54,
+              102,
+              100,
+              53,
+              97,
+              54,
+              48,
+              52,
+              100,
+              57,
+              97,
+              55,
+              52,
+              102,
+              98,
+              57,
+              54,
+              98,
+              51,
+              51,
+              54,
+              102,
+              54,
+              55,
+              57,
+              98,
+              57,
+              53,
+              53,
+              52,
+              98,
+              52,
+              97,
+              58,
+              111,
+              112,
+              101,
+              110,
+              45,
+              104,
+              97,
+              114,
+              98,
+              111,
+              114
+            ],
+            "readable": "\"0xcfdccbf6fd5a604d9a74fb96b336f679b9554b4a:open-harbor\""
+          }
+        }
+      }
+    },
+    {
+      "label": "mandate-1",
+      "actor": "0x2080077b191dc78dd670771529f1577e0d4c8df4",
+      "method": "set_mandate",
+      "args": [
+        "0xcfdccbf6fd5a604d9a74fb96b336f679b9554b4a:open-harbor",
+        15,
+        "{\"to\":\"0xf4c46af7b77154d148f85e6ddabf8f7d41da144e\",\"allow\":[\"Renewal of monthly automated testing infrastructure and routine software maintenance services.\"],\"exclude\":[],\"max_hops\":1}"
+      ],
+      "expected_failure": false,
+      "hash": "0x84c22b19bb095365dac86dfdc0718b9c308e8368f41f66a1b606fde72775bee3",
+      "submitted_at": "2026-11-17T07:23:44.058Z",
+      "last_status": "FINALIZED",
+      "receipt": {
+        "hash": "0x84c22b19bb095365dac86dfdc0718b9c308e8368f41f66a1b606fde72775bee3",
+        "statusName": "FINALIZED",
+        "txExecutionResultName": "SUCCESS",
+        "result_name": "MAJORITY_AGREE",
+        "from_address": "0x2080077B191dC78Dd670771529F1577e0d4c8Df4",
+        "to_address": "0xAbF34de3273BDbF463Ea8d5b944D746394bd12F6",
+        "data": {},
+        "leader_only": false,
+        "votes": {
+          "0x628f4d491b8753Be1eD022f6D920853b8b541937": "agree",
+          "0x7d74A02562B3C443A6b12FE7996Bc5c9A578554E": "agree",
+          "0xB64c3Fa67e1f33aA1EFc721B7Ac763f2070fCcA3": "idle",
+          "0xDc5B687ca37c3C65a16Dd456e6Ce4CF8Be2FfC9d": "idle",
+          "0xeA908540c5FBB68Da844cC1BE5eaC8b23391e908": "agree"
+        },
+        "leader_result": {
+          "raw": "ALQDMHhjZmRjY2JmNmZkNWE2MDRkOWE3NGZiOTZiMzM2ZjY3OWI5NTU0YjRhOm9wZW4taGFyYm9y",
+          "status": "return",
+          "payload": {
+            "raw": [
+              180,
+              3,
+              48,
+              120,
+              99,
+              102,
+              100,
+              99,
+              99,
+              98,
+              102,
+              54,
+              102,
+              100,
+              53,
+              97,
+              54,
+              48,
+              52,
+              100,
+              57,
+              97,
+              55,
+              52,
+              102,
+              98,
+              57,
+              54,
+              98,
+              51,
+              51,
+              54,
+              102,
+              54,
+              55,
+              57,
+              98,
+              57,
+              53,
+              53,
+              52,
+              98,
+              52,
+              97,
+              58,
+              111,
+              112,
+              101,
+              110,
+              45,
+              104,
+              97,
+              114,
+              98,
+              111,
+              114
+            ],
+            "readable": "\"0xcfdccbf6fd5a604d9a74fb96b336f679b9554b4a:open-harbor\""
+          }
+        }
+      }
+    },
+    {
+      "label": "mandate-4",
+      "actor": "0x70645451e6849757c77ebb82496268b2ff8e7287",
+      "method": "set_mandate",
+      "args": [
+        "0xcfdccbf6fd5a604d9a74fb96b336f679b9554b4a:open-harbor",
+        16,
+        "{\"to\":\"0xda321ca5a7f1dd078c62e78bbdeb020fc1739609\",\"allow\":[\"Editing the content of documentation pages only.\"],\"exclude\":[],\"max_hops\":2}"
+      ],
+      "expected_failure": false,
+      "hash": "0x738562eb187adab56796624dd6a78f7adb068d259b07e64f8363bb9d5d03348f",
+      "submitted_at": "2026-11-17T07:24:20.034Z",
+      "last_status": "FINALIZED",
+      "receipt": {
+        "hash": "0x738562eb187adab56796624dd6a78f7adb068d259b07e64f8363bb9d5d03348f",
+        "statusName": "FINALIZED",
+        "txExecutionResultName": "SUCCESS",
+        "result_name": "MAJORITY_AGREE",
+        "from_address": "0x70645451e6849757c77eBB82496268b2fF8E7287",
+        "to_address": "0xAbF34de3273BDbF463Ea8d5b944D746394bd12F6",
+        "data": {},
+        "leader_only": false,
+        "votes": {
+          "0x173a86dBe046c0c6aA3A48Bb8dd9d20c001a2ac1": "agree",
+          "0x364A7fb8bf37b1D388c4A81B4b109d91334dC9fd": "agree",
+          "0xCCE41534BAa355c2C268Ebd9EFE4a9D395cd659B": "idle",
+          "0xDc3C84a9Bc42d0b91219c27B00bbbA8CA0F0259A": "idle",
+          "0xc4Ab6B9D74c72EB38D43645318Bb4aFb518a09be": "agree"
+        },
+        "leader_result": {
+          "raw": "ALQDMHhjZmRjY2JmNmZkNWE2MDRkOWE3NGZiOTZiMzM2ZjY3OWI5NTU0YjRhOm9wZW4taGFyYm9y",
+          "status": "return",
+          "payload": {
+            "raw": [
+              180,
+              3,
+              48,
+              120,
+              99,
+              102,
+              100,
+              99,
+              99,
+              98,
+              102,
+              54,
+              102,
+              100,
+              53,
+              97,
+              54,
+              48,
+              52,
+              100,
+              57,
+              97,
+              55,
+              52,
+              102,
+              98,
+              57,
+              54,
+              98,
+              51,
+              51,
+              54,
+              102,
+              54,
+              55,
+              57,
+              98,
+              57,
+              53,
+              53,
+              52,
+              98,
+              52,
+              97,
+              58,
+              111,
+              112,
+              101,
+              110,
+              45,
+              104,
+              97,
+              114,
+              98,
+              111,
+              114
+            ],
+            "readable": "\"0xcfdccbf6fd5a604d9a74fb96b336f679b9554b4a:open-harbor\""
+          }
+        }
+      }
+    },
+    {
+      "label": "mandate-5",
+      "actor": "0xda321ca5a7f1dd078c62e78bbdeb020fc1739609",
+      "method": "set_mandate",
+      "args": [
+        "0xcfdccbf6fd5a604d9a74fb96b336f679b9554b4a:open-harbor",
+        17,
+        "{\"to\":\"0x76f02f2b3b30f2e2dff7a93110afc09f3990f7fc\",\"allow\":[\"Renewal of monthly automated testing infrastructure and routine software maintenance services.\"],\"exclude\":[],\"max_hops\":2}"
+      ],
+      "expected_failure": false,
+      "hash": "0x05d1fab85ea4839b41930b69ef4fd680fd3d2503a1a0ee9270d3912e3803d029",
+      "submitted_at": "2026-11-17T07:25:09.220Z",
+      "last_status": "FINALIZED",
+      "receipt": {
+        "hash": "0x05d1fab85ea4839b41930b69ef4fd680fd3d2503a1a0ee9270d3912e3803d029",
+        "statusName": "FINALIZED",
+        "txExecutionResultName": "SUCCESS",
+        "result_name": "MAJORITY_AGREE",
+        "from_address": "0xda321cA5A7F1dd078C62e78BBdEb020FC1739609",
+        "to_address": "0xAbF34de3273BDbF463Ea8d5b944D746394bd12F6",
+        "data": {},
+        "leader_only": false,
+        "votes": {
+          "0x173a86dBe046c0c6aA3A48Bb8dd9d20c001a2ac1": "agree",
+          "0x29e027b307e32d2FB76825aB3cB21bcF79A433Aa": "idle",
+          "0x5D4dD8d9f034c2fC742A1bE9C6d71D985d4D5Ac4": "agree",
+          "0x7d74A02562B3C443A6b12FE7996Bc5c9A578554E": "idle",
+          "0xc4Ab6B9D74c72EB38D43645318Bb4aFb518a09be": "agree"
+        },
+        "leader_result": {
+          "raw": "ALQDMHhjZmRjY2JmNmZkNWE2MDRkOWE3NGZiOTZiMzM2ZjY3OWI5NTU0YjRhOm9wZW4taGFyYm9y",
+          "status": "return",
+          "payload": {
+            "raw": [
+              180,
+              3,
+              48,
+              120,
+              99,
+              102,
+              100,
+              99,
+              99,
+              98,
+              102,
+              54,
+              102,
+              100,
+              53,
+              97,
+              54,
+              48,
+              52,
+              100,
+              57,
+              97,
+              55,
+              52,
+              102,
+              98,
+              57,
+              54,
+              98,
+              51,
+              51,
+              54,
+              102,
+              54,
+              55,
+              57,
+              98,
+              57,
+              53,
+              53,
+              52,
+              98,
+              52,
+              97,
+              58,
+              111,
+              112,
+              101,
+              110,
+              45,
+              104,
+              97,
+              114,
+              98,
+              111,
+              114
+            ],
+            "readable": "\"0xcfdccbf6fd5a604d9a74fb96b336f679b9554b4a:open-harbor\""
+          }
+        }
+      }
+    },
+    {
+      "label": "mandate-6",
+      "actor": "0x76f02f2b3b30f2e2dff7a93110afc09f3990f7fc",
+      "method": "set_mandate",
+      "args": [
+        "0xcfdccbf6fd5a604d9a74fb96b336f679b9554b4a:open-harbor",
+        18,
+        "{\"to\":\"0xda321ca5a7f1dd078c62e78bbdeb020fc1739609\",\"allow\":[\"Renewal of monthly automated testing infrastructure and routine software maintenance services.\"],\"exclude\":[],\"max_hops\":2}"
+      ],
+      "expected_failure": false,
+      "hash": "0xed45b266ea4a4e7b8c90e2219f1f24172ce7303b14f6d22590d2ac51b328343e",
+      "submitted_at": "2026-11-17T07:25:51.204Z",
+      "last_status": "FINALIZED",
+      "receipt": {
+        "hash": "0xed45b266ea4a4e7b8c90e2219f1f24172ce7303b14f6d22590d2ac51b328343e",
+        "statusName": "FINALIZED",
+        "txExecutionResultName": "SUCCESS",
+        "result_name": "MAJORITY_AGREE",
+        "from_address": "0x76F02f2B3B30F2e2DFF7A93110Afc09F3990F7FC",
+        "to_address": "0xAbF34de3273BDbF463Ea8d5b944D746394bd12F6",
+        "data": {},
+        "leader_only": false,
+        "votes": {
+          "0x5D4dD8d9f034c2fC742A1bE9C6d71D985d4D5Ac4": "agree",
+          "0x7d74A02562B3C443A6b12FE7996Bc5c9A578554E": "agree",
+          "0xB64c3Fa67e1f33aA1EFc721B7Ac763f2070fCcA3": "agree",
+          "0xc4Ab6B9D74c72EB38D43645318Bb4aFb518a09be": "idle",
+          "0xeA908540c5FBB68Da844cC1BE5eaC8b23391e908": "idle"
+        },
+        "leader_result": {
+          "raw": "ALQDMHhjZmRjY2JmNmZkNWE2MDRkOWE3NGZiOTZiMzM2ZjY3OWI5NTU0YjRhOm9wZW4taGFyYm9y",
+          "status": "return",
+          "payload": {
+            "raw": [
+              180,
+              3,
+              48,
+              120,
+              99,
+              102,
+              100,
+              99,
+              99,
+              98,
+              102,
+              54,
+              102,
+              100,
+              53,
+              97,
+              54,
+              48,
+              52,
+              100,
+              57,
+              97,
+              55,
+              52,
+              102,
+              98,
+              57,
+              54,
+              98,
+              51,
+              51,
+              54,
+              102,
+              54,
+              55,
+              57,
+              98,
+              57,
+              53,
+              53,
+              52,
+              98,
+              52,
+              97,
+              58,
+              111,
+              112,
+              101,
+              110,
+              45,
+              104,
+              97,
+              114,
+              98,
+              111,
+              114
+            ],
+            "readable": "\"0xcfdccbf6fd5a604d9a74fb96b336f679b9554b4a:open-harbor\""
+          }
+        }
+      }
+    },
+    {
+      "label": "mandate-7",
+      "actor": "0xb12b010db0457b577391cc28df1d10ec11eb1bc8",
+      "method": "set_mandate",
+      "args": [
+        "0xcfdccbf6fd5a604d9a74fb96b336f679b9554b4a:open-harbor",
+        19,
+        "{\"to\":\"0xf4c46af7b77154d148f85e6ddabf8f7d41da144e\",\"allow\":[\"Decisions about things that are good for the community.\"],\"exclude\":[],\"max_hops\":1}"
+      ],
+      "expected_failure": false,
+      "hash": "0x1b31e98f895264fe53f75133efd5785614ae7ab7e4a5b234e1c4736b699bfa97",
+      "submitted_at": "2026-11-17T07:26:37.179Z",
+      "last_status": "FINALIZED",
+      "receipt": {
+        "hash": "0x1b31e98f895264fe53f75133efd5785614ae7ab7e4a5b234e1c4736b699bfa97",
+        "statusName": "FINALIZED",
+        "txExecutionResultName": "SUCCESS",
+        "result_name": "MAJORITY_AGREE",
+        "from_address": "0xb12B010DB0457b577391cC28df1D10Ec11Eb1Bc8",
+        "to_address": "0xAbF34de3273BDbF463Ea8d5b944D746394bd12F6",
+        "data": {},
+        "leader_only": false,
+        "votes": {
+          "0x174A9261a34D502212bE59deB3319508b9ff0fD7": "agree",
+          "0x5D4dD8d9f034c2fC742A1bE9C6d71D985d4D5Ac4": "agree",
+          "0x628f4d491b8753Be1eD022f6D920853b8b541937": "agree",
+          "0xB64c3Fa67e1f33aA1EFc721B7Ac763f2070fCcA3": "idle",
+          "0xf20Cb474E5be2f56EA6Be925D057c28f458270da": "idle"
+        },
+        "leader_result": {
+          "raw": "ALQDMHhjZmRjY2JmNmZkNWE2MDRkOWE3NGZiOTZiMzM2ZjY3OWI5NTU0YjRhOm9wZW4taGFyYm9y",
+          "status": "return",
+          "payload": {
+            "raw": [
+              180,
+              3,
+              48,
+              120,
+              99,
+              102,
+              100,
+              99,
+              99,
+              98,
+              102,
+              54,
+              102,
+              100,
+              53,
+              97,
+              54,
+              48,
+              52,
+              100,
+              57,
+              97,
+              55,
+              52,
+              102,
+              98,
+              57,
+              54,
+              98,
+              51,
+              51,
+              54,
+              102,
+              54,
+              55,
+              57,
+              98,
+              57,
+              53,
+              53,
+              52,
+              98,
+              52,
+              97,
+              58,
+              111,
+              112,
+              101,
+              110,
+              45,
+              104,
+              97,
+              114,
+              98,
+              111,
+              114
+            ],
+            "readable": "\"0xcfdccbf6fd5a604d9a74fb96b336f679b9554b4a:open-harbor\""
+          }
+        }
+      }
+    },
+    {
+      "label": "freeze",
+      "actor": "0xcfdccbf6fd5a604d9a74fb96b336f679b9554b4a",
+      "method": "freeze_proposal",
+      "args": [
+        "0xcfdccbf6fd5a604d9a74fb96b336f679b9554b4a:open-harbor",
+        20,
+        "testing-renewal",
+        "Renew one month of testing infrastructure",
+        "Renew the automated testing infrastructure service for one month. This proposal only authorizes routine software test execution infrastructure. It does not appoint or remove personnel, edit documentation content, sell assets, or change membership rules.",
+        5,
+        1
+      ],
+      "expected_failure": false,
+      "hash": "0x836d7cb52ab49f541c0426f38f686177cd53240ac41405237138df25535e7fec",
+      "submitted_at": "2026-11-17T07:27:28.846Z",
+      "last_status": "FINALIZED",
+      "receipt": {
+        "hash": "0x836d7cb52ab49f541c0426f38f686177cd53240ac41405237138df25535e7fec",
+        "statusName": "FINALIZED",
+        "txExecutionResultName": "SUCCESS",
+        "result_name": "MAJORITY_AGREE",
+        "from_address": "0xcFDCcbF6Fd5a604D9A74FB96B336f679B9554b4a",
+        "to_address": "0xAbF34de3273BDbF463Ea8d5b944D746394bd12F6",
+        "data": {},
+        "leader_only": false,
+        "leader_result": null
+      }
+    },
+    {
+      "label": "scope-batch-0",
+      "actor": "0xcfdccbf6fd5a604d9a74fb96b336f679b9554b4a",
+      "method": "assess_batch",
+      "args": [
+        "0xcfdccbf6fd5a604d9a74fb96b336f679b9554b4a:open-harbor:0xcfdccbf6fd5a604d9a74fb96b336f679b9554b4a:testing-renewal",
+        0,
+        "[\"0x2080077b191dc78dd670771529f1577e0d4c8df4\",\"0x70645451e6849757c77ebb82496268b2ff8e7287\",\"0x76f02f2b3b30f2e2dff7a93110afc09f3990f7fc\",\"0xb12b010db0457b577391cc28df1d10ec11eb1bc8\"]"
+      ],
+      "expected_failure": false,
+      "hash": "0xb29bf4cba8cc6b289813740f107654c19c4c7dd59d20549db7c08ad616848fa9",
+      "submitted_at": "2026-11-17T07:28:19.667Z",
+      "last_status": "FINALIZED",
+      "receipt": {
+        "hash": "0xb29bf4cba8cc6b289813740f107654c19c4c7dd59d20549db7c08ad616848fa9",
+        "statusName": "FINALIZED",
+        "txExecutionResultName": "SUCCESS",
+        "result_name": "MAJORITY_AGREE",
+        "from_address": "0xcFDCcbF6Fd5a604D9A74FB96B336f679B9554b4a",
+        "to_address": "0xAbF34de3273BDbF463Ea8d5b944D746394bd12F6",
+        "data": {},
+        "leader_only": false,
+        "leader_result": null
+      }
+    },
+    {
+      "label": "scope-batch-4",
+      "actor": "0xcfdccbf6fd5a604d9a74fb96b336f679b9554b4a",
+      "method": "assess_batch",
+      "args": [
+        "0xcfdccbf6fd5a604d9a74fb96b336f679b9554b4a:open-harbor:0xcfdccbf6fd5a604d9a74fb96b336f679b9554b4a:testing-renewal",
+        1,
+        "[\"0xcfdccbf6fd5a604d9a74fb96b336f679b9554b4a\",\"0xda321ca5a7f1dd078c62e78bbdeb020fc1739609\"]"
+      ],
+      "expected_failure": false,
+      "hash": "0xff569e1f1dc4a11b657bf105f32a3e1909edbbc8ed0dcea417ea1db24c7a2c8b",
+      "submitted_at": "2026-11-17T07:29:15.720Z",
+      "last_status": "FINALIZED",
+      "receipt": {
+        "hash": "0xff569e1f1dc4a11b657bf105f32a3e1909edbbc8ed0dcea417ea1db24c7a2c8b",
+        "statusName": "FINALIZED",
+        "txExecutionResultName": "SUCCESS",
+        "result_name": "MAJORITY_AGREE",
+        "from_address": "0xcFDCcbF6Fd5a604D9A74FB96B336f679B9554b4a",
+        "to_address": "0xAbF34de3273BDbF463Ea8d5b944D746394bd12F6",
+        "data": {},
+        "leader_only": false,
+        "leader_result": null
+      }
+    },
+    {
+      "label": "open-voting",
+      "actor": "0xcfdccbf6fd5a604d9a74fb96b336f679b9554b4a",
+      "method": "open_voting",
+      "args": [
+        "0xcfdccbf6fd5a604d9a74fb96b336f679b9554b4a:open-harbor:0xcfdccbf6fd5a604d9a74fb96b336f679b9554b4a:testing-renewal",
+        2
+      ],
+      "expected_failure": false,
+      "hash": "0xe641491a52462d52e28c02e30dc16e1c821d6ec87f33854edc694e22751a4c8c",
+      "submitted_at": "2026-11-17T07:30:19.038Z",
+      "last_status": "FINALIZED",
+      "receipt": {
+        "hash": "0xe641491a52462d52e28c02e30dc16e1c821d6ec87f33854edc694e22751a4c8c",
+        "statusName": "FINALIZED",
+        "txExecutionResultName": "SUCCESS",
+        "result_name": "MAJORITY_AGREE",
+        "from_address": "0xcFDCcbF6Fd5a604D9A74FB96B336f679B9554b4a",
+        "to_address": "0xAbF34de3273BDbF463Ea8d5b944D746394bd12F6",
+        "data": {},
+        "leader_only": false,
+        "leader_result": null
+      }
+    },
+    {
+      "label": "ballot-2",
+      "actor": "0xf4c46af7b77154d148f85e6ddabf8f7d41da144e",
+      "method": "cast_vote",
+      "args": [
+        "0xcfdccbf6fd5a604d9a74fb96b336f679b9554b4a:open-harbor:0xcfdccbf6fd5a604d9a74fb96b336f679b9554b4a:testing-renewal",
+        0,
+        "YES"
+      ],
+      "expected_failure": false,
+      "hash": "0xc8372458cee30114d1da4968563abfc16a40b03e7d6c7cc1a02bb47aa76026da",
+      "submitted_at": "2026-11-17T07:31:01.235Z",
+      "last_status": "FINALIZED",
+      "receipt": {
+        "hash": "0xc8372458cee30114d1da4968563abfc16a40b03e7d6c7cc1a02bb47aa76026da",
+        "statusName": "FINALIZED",
+        "txExecutionResultName": "SUCCESS",
+        "result_name": "MAJORITY_AGREE",
+        "from_address": "0xf4c46af7b77154d148f85e6dDabf8F7d41da144e",
+        "to_address": "0xAbF34de3273BDbF463Ea8d5b944D746394bd12F6",
+        "data": {},
+        "leader_only": false,
+        "leader_result": null
+      }
+    },
+    {
+      "label": "ballot-3",
+      "actor": "0x0829340c9244d2b254ea77aec12efbba2d3afcff",
+      "method": "cast_vote",
+      "args": [
+        "0xcfdccbf6fd5a604d9a74fb96b336f679b9554b4a:open-harbor:0xcfdccbf6fd5a604d9a74fb96b336f679b9554b4a:testing-renewal",
+        0,
+        "NO"
+      ],
+      "expected_failure": false,
+      "hash": "0x61271d725395bcbf7d20db9612a15f37d41ad0807fd6e2c0827c1e528c4f9f35",
+      "submitted_at": "2026-11-17T07:31:46.170Z",
+      "last_status": "FINALIZED",
+      "receipt": {
+        "hash": "0x61271d725395bcbf7d20db9612a15f37d41ad0807fd6e2c0827c1e528c4f9f35",
+        "statusName": "FINALIZED",
+        "txExecutionResultName": "SUCCESS",
+        "result_name": "MAJORITY_AGREE",
+        "from_address": "0x0829340C9244D2B254Ea77aeC12EfBbA2d3AfCFf",
+        "to_address": "0xAbF34de3273BDbF463Ea8d5b944D746394bd12F6",
+        "data": {},
+        "leader_only": false,
+        "leader_result": null
+      }
+    },
+    {
+      "label": "ballot-7",
+      "actor": "0xb12b010db0457b577391cc28df1d10ec11eb1bc8",
+      "method": "cast_vote",
+      "args": [
+        "0xcfdccbf6fd5a604d9a74fb96b336f679b9554b4a:open-harbor:0xcfdccbf6fd5a604d9a74fb96b336f679b9554b4a:testing-renewal",
+        0,
+        "ABSTAIN"
+      ],
+      "expected_failure": false,
+      "hash": "0xf24f43b0ca2744d697d4ec41d6ad6157106f11bb6c0253aa4d2d5016df3c77f8",
+      "submitted_at": "2026-11-17T07:32:28.266Z",
+      "last_status": "FINALIZED",
+      "receipt": {
+        "hash": "0xf24f43b0ca2744d697d4ec41d6ad6157106f11bb6c0253aa4d2d5016df3c77f8",
+        "statusName": "FINALIZED",
+        "txExecutionResultName": "SUCCESS",
+        "result_name": "MAJORITY_AGREE",
+        "from_address": "0xb12B010DB0457b577391cC28df1D10Ec11Eb1Bc8",
+        "to_address": "0xAbF34de3273BDbF463Ea8d5b944D746394bd12F6",
+        "data": {},
+        "leader_only": false,
+        "leader_result": null
+      }
+    },
+    {
+      "label": "unauthorized-ballot",
+      "actor": "0xcfdccbf6fd5a604d9a74fb96b336f679b9554b4a",
+      "method": "cast_vote",
+      "args": [
+        "0xcfdccbf6fd5a604d9a74fb96b336f679b9554b4a:open-harbor:0xcfdccbf6fd5a604d9a74fb96b336f679b9554b4a:testing-renewal",
+        99,
+        "YES"
+      ],
+      "expected_failure": true,
+      "hash": "0xcf086ffe4a2e569cc885d504aac1c04d0d68ac83c1cba96663fb54e25f0dc8fe",
+      "submitted_at": "2026-11-17T07:33:19.005Z",
+      "last_status": "FINALIZED",
+      "receipt": {
+        "hash": "0xcf086ffe4a2e569cc885d504aac1c04d0d68ac83c1cba96663fb54e25f0dc8fe",
+        "statusName": "FINALIZED",
+        "txExecutionResultName": "ERROR",
+        "result_name": "MAJORITY_AGREE",
+        "from_address": "0xcFDCcbF6Fd5a604D9A74FB96B336f679B9554b4a",
+        "to_address": "0xAbF34de3273BDbF463Ea8d5b944D746394bd12F6",
+        "data": {},
+        "leader_only": false,
+        "leader_result": null
+      }
+    },
+    {
+      "label": "early-settlement",
+      "actor": "0xcfdccbf6fd5a604d9a74fb96b336f679b9554b4a",
+      "method": "settle",
+      "args": [
+        "0xcfdccbf6fd5a604d9a74fb96b336f679b9554b4a:open-harbor:0xcfdccbf6fd5a604d9a74fb96b336f679b9554b4a:testing-renewal"
+      ],
+      "expected_failure": true,
+      "hash": "0xf2fd1237111defb312cc68120c98139d981bc7453042a0fa1e56d6061385a30f",
+      "submitted_at": "2026-11-17T07:34:00.988Z",
+      "last_status": "FINALIZED",
+      "receipt": {
+        "hash": "0xf2fd1237111defb312cc68120c98139d981bc7453042a0fa1e56d6061385a30f",
+        "statusName": "FINALIZED",
+        "txExecutionResultName": "ERROR",
+        "result_name": "MAJORITY_AGREE",
+        "from_address": "0xcFDCcbF6Fd5a604D9A74FB96B336f679B9554b4a",
+        "to_address": "0xAbF34de3273BDbF463Ea8d5b944D746394bd12F6",
+        "data": {},
+        "leader_only": false,
+        "leader_result": null
+      }
+    },
+    {
+      "label": "settlement",
+      "actor": "0xcfdccbf6fd5a604d9a74fb96b336f679b9554b4a",
+      "method": "settle",
+      "args": [
+        "0xcfdccbf6fd5a604d9a74fb96b336f679b9554b4a:open-harbor:0xcfdccbf6fd5a604d9a74fb96b336f679b9554b4a:testing-renewal"
+      ],
+      "expected_failure": false,
+      "hash": "0x3d76160b73f41f387c1652a33336beed2167adbd2d9b02bddca9a893b33523c7",
+      "submitted_at": "2026-11-17T10:40:34.241Z",
+      "last_status": "FINALIZED",
+      "receipt": {
+        "hash": "0x3d76160b73f41f387c1652a33336beed2167adbd2d9b02bddca9a893b33523c7",
+        "statusName": "FINALIZED",
+        "txExecutionResultName": "SUCCESS",
+        "result_name": "MAJORITY_AGREE",
+        "from_address": "0xcFDCcbF6Fd5a604D9A74FB96B336f679B9554b4a",
+        "to_address": "0xAbF34de3273BDbF463Ea8d5b944D746394bd12F6",
+        "data": {},
+        "leader_only": false,
+        "votes": {
+          "0x0533e32Ae90B9065476eB89C2Bb655eCD98764BD": "agree",
+          "0xCCE41534BAa355c2C268Ebd9EFE4a9D395cd659B": "agree",
+          "0xD2762A898b8262acB88024bf7d5Bb4336375cF22": "idle",
+          "0xDc5B687ca37c3C65a16Dd456e6Ce4CF8Be2FfC9d": "idle",
+          "0xf298378Fba762Ebf0cDf0c3dA90C33E730e1CdC3": "agree"
+        },
+        "leader_result": {
+          "raw": "AIwHMHhjZmRjY2JmNmZkNWE2MDRkOWE3NGZiOTZiMzM2ZjY3OWI5NTU0YjRhOm9wZW4taGFyYm9yOjB4Y2ZkY2NiZjZmZDVhNjA0ZDlhNzRmYjk2YjMzNmY2NzliOTU1NGI0YTp0ZXN0aW5nLXJlbmV3YWw=",
+          "status": "return",
+          "payload": {
+            "raw": [
+              140,
+              7,
+              48,
+              120,
+              99,
+              102,
+              100,
+              99,
+              99,
+              98,
+              102,
+              54,
+              102,
+              100,
+              53,
+              97,
+              54,
+              48,
+              52,
+              100,
+              57,
+              97,
+              55,
+              52,
+              102,
+              98,
+              57,
+              54,
+              98,
+              51,
+              51,
+              54,
+              102,
+              54,
+              55,
+              57,
+              98,
+              57,
+              53,
+              53,
+              52,
+              98,
+              52,
+              97,
+              58,
+              111,
+              112,
+              101,
+              110,
+              45,
+              104,
+              97,
+              114,
+              98,
+              111,
+              114,
+              58,
+              48,
+              120,
+              99,
+              102,
+              100,
+              99,
+              99,
+              98,
+              102,
+              54,
+              102,
+              100,
+              53,
+              97,
+              54,
+              48,
+              52,
+              100,
+              57,
+              97,
+              55,
+              52,
+              102,
+              98,
+              57,
+              54,
+              98,
+              51,
+              51,
+              54,
+              102,
+              54,
+              55,
+              57,
+              98,
+              57,
+              53,
+              53,
+              52,
+              98,
+              52,
+              97,
+              58,
+              116,
+              101,
+              115,
+              116,
+              105,
+              110,
+              103,
+              45,
+              114,
+              101,
+              110,
+              101,
+              119,
+              97,
+              108
+            ],
+            "readable": "\"0xcfdccbf6fd5a604d9a74fb96b336f679b9554b4a:open-harbor:0xcfdccbf6fd5a604d9a74fb96b336f679b9554b4a:testing-renewal\""
+          }
+        }
+      }
+    },
+    {
+      "label": "settlement-replay",
+      "actor": "0xcfdccbf6fd5a604d9a74fb96b336f679b9554b4a",
+      "method": "settle",
+      "args": [
+        "0xcfdccbf6fd5a604d9a74fb96b336f679b9554b4a:open-harbor:0xcfdccbf6fd5a604d9a74fb96b336f679b9554b4a:testing-renewal"
+      ],
+      "expected_failure": true,
+      "hash": "0x3f656b5482783cccf8e28bf16bae08efd6e384a488620a3c1c1245cedf3a5d7b",
+      "submitted_at": "2026-11-17T10:41:31.189Z",
+      "last_status": "FINALIZED",
+      "receipt": {
+        "hash": "0x3f656b5482783cccf8e28bf16bae08efd6e384a488620a3c1c1245cedf3a5d7b",
+        "statusName": "FINALIZED",
+        "txExecutionResultName": "ERROR",
+        "result_name": "MAJORITY_AGREE",
+        "from_address": "0xcFDCcbF6Fd5a604D9A74FB96B336f679B9554b4a",
+        "to_address": "0xAbF34de3273BDbF463Ea8d5b944D746394bd12F6",
+        "data": {},
+        "leader_only": false,
+        "votes": {
+          "0x29e027b307e32d2FB76825aB3cB21bcF79A433Aa": "idle",
+          "0x5D4dD8d9f034c2fC742A1bE9C6d71D985d4D5Ac4": "agree",
+          "0xCCE41534BAa355c2C268Ebd9EFE4a9D395cd659B": "agree",
+          "0xeA908540c5FBB68Da844cC1BE5eaC8b23391e908": "agree",
+          "0xf298378Fba762Ebf0cDf0c3dA90C33E730e1CdC3": "agree"
+        },
+        "leader_result": {
+          "raw": "AmV4aXRfY29kZSAx",
+          "status": "contract_error",
+          "payload": "exit_code 1"
+        }
+      }
+    }
+  ],
+  "records": {
+    "space_before_freeze": {
+      "created_at": 1794899513,
+      "id": "0xcfdccbf6fd5a604d9a74fb96b336f679b9554b4a:open-harbor",
+      "invited": [],
+      "mandates": {
+        "0x2080077b191dc78dd670771529f1577e0d4c8df4": {
+          "allow": [
+            "Renewal of monthly automated testing infrastructure and routine software maintenance services."
+          ],
+          "exclude": [],
+          "max_hops": 1,
+          "owner": "0x2080077b191dc78dd670771529f1577e0d4c8df4",
+          "signed_at": 1794900223,
+          "to": "0xf4c46af7b77154d148f85e6ddabf8f7d41da144e",
+          "version": 1
+        },
+        "0x70645451e6849757c77ebb82496268b2ff8e7287": {
+          "allow": [
+            "Editing the content of documentation pages only."
+          ],
+          "exclude": [],
+          "max_hops": 2,
+          "owner": "0x70645451e6849757c77ebb82496268b2ff8e7287",
+          "signed_at": 1794900259,
+          "to": "0xda321ca5a7f1dd078c62e78bbdeb020fc1739609",
+          "version": 1
+        },
+        "0x76f02f2b3b30f2e2dff7a93110afc09f3990f7fc": {
+          "allow": [
+            "Renewal of monthly automated testing infrastructure and routine software maintenance services."
+          ],
+          "exclude": [],
+          "max_hops": 2,
+          "owner": "0x76f02f2b3b30f2e2dff7a93110afc09f3990f7fc",
+          "signed_at": 1794900351,
+          "to": "0xda321ca5a7f1dd078c62e78bbdeb020fc1739609",
+          "version": 1
+        },
+        "0xb12b010db0457b577391cc28df1d10ec11eb1bc8": {
+          "allow": [
+            "Decisions about things that are good for the community."
+          ],
+          "exclude": [],
+          "max_hops": 1,
+          "owner": "0xb12b010db0457b577391cc28df1d10ec11eb1bc8",
+          "signed_at": 1794900397,
+          "to": "0xf4c46af7b77154d148f85e6ddabf8f7d41da144e",
+          "version": 1
+        },
+        "0xcfdccbf6fd5a604d9a74fb96b336f679b9554b4a": {
+          "allow": [
+            "Renewal of monthly automated testing infrastructure and routine software maintenance services."
+          ],
+          "exclude": [
+            "Personnel appointments or removals."
+          ],
+          "max_hops": 2,
+          "owner": "0xcfdccbf6fd5a604d9a74fb96b336f679b9554b4a",
+          "signed_at": 1794900179,
+          "to": "0x2080077b191dc78dd670771529f1577e0d4c8df4",
+          "version": 1
+        },
+        "0xda321ca5a7f1dd078c62e78bbdeb020fc1739609": {
+          "allow": [
+            "Renewal of monthly automated testing infrastructure and routine software maintenance services."
+          ],
+          "exclude": [],
+          "max_hops": 2,
+          "owner": "0xda321ca5a7f1dd078c62e78bbdeb020fc1739609",
+          "signed_at": 1794900308,
+          "to": "0x76f02f2b3b30f2e2dff7a93110afc09f3990f7fc",
+          "version": 1
+        }
+      },
+      "members": [
+        "0xcfdccbf6fd5a604d9a74fb96b336f679b9554b4a",
+        "0x2080077b191dc78dd670771529f1577e0d4c8df4",
+        "0xf4c46af7b77154d148f85e6ddabf8f7d41da144e",
+        "0x0829340c9244d2b254ea77aec12efbba2d3afcff",
+        "0x70645451e6849757c77ebb82496268b2ff8e7287",
+        "0xda321ca5a7f1dd078c62e78bbdeb020fc1739609",
+        "0x76f02f2b3b30f2e2dff7a93110afc09f3990f7fc",
+        "0xb12b010db0457b577391cc28df1d10ec11eb1bc8"
+      ],
+      "name": "Open Harbor Collective",
+      "names": {
+        "0x0829340c9244d2b254ea77aec12efbba2d3afcff": "Devon",
+        "0x2080077b191dc78dd670771529f1577e0d4c8df4": "Rowan",
+        "0x70645451e6849757c77ebb82496268b2ff8e7287": "Emery",
+        "0x76f02f2b3b30f2e2dff7a93110afc09f3990f7fc": "Gray",
+        "0xb12b010db0457b577391cc28df1d10ec11eb1bc8": "Harper",
+        "0xcfdccbf6fd5a604d9a74fb96b336f679b9554b4a": "Alex",
+        "0xda321ca5a7f1dd078c62e78bbdeb020fc1739609": "Finley",
+        "0xf4c46af7b77154d148f85e6ddabf8f7d41da144e": "Casey"
+      },
+      "owner": "0xcfdccbf6fd5a604d9a74fb96b336f679b9554b4a",
+      "proposal_ids": [],
+      "revision": 20
+    },
+    "frozen": {
+      "ballots": {},
+      "created_at": 1794900448,
+      "creator": "0xcfdccbf6fd5a604d9a74fb96b336f679b9554b4a",
+      "deadline": 0,
+      "eligibility": {
+        "0x2080077b191dc78dd670771529f1577e0d4c8df4": {
+          "status": "PENDING"
+        },
+        "0x70645451e6849757c77ebb82496268b2ff8e7287": {
+          "status": "PENDING"
+        },
+        "0x76f02f2b3b30f2e2dff7a93110afc09f3990f7fc": {
+          "status": "PENDING"
+        },
+        "0xb12b010db0457b577391cc28df1d10ec11eb1bc8": {
+          "status": "PENDING"
+        },
+        "0xcfdccbf6fd5a604d9a74fb96b336f679b9554b4a": {
+          "status": "PENDING"
+        },
+        "0xda321ca5a7f1dd078c62e78bbdeb020fc1739609": {
+          "status": "PENDING"
+        }
+      },
+      "id": "0xcfdccbf6fd5a604d9a74fb96b336f679b9554b4a:open-harbor:0xcfdccbf6fd5a604d9a74fb96b336f679b9554b4a:testing-renewal",
+      "opened_at": 0,
+      "prepare_until": 1794986848,
+      "result": null,
+      "revision": 0,
+      "snapshot": {
+        "body": "Renew the automated testing infrastructure service for one month. This proposal only authorizes routine software test execution infrastructure. It does not appoint or remove personnel, edit documentation content, sell assets, or change membership rules.",
+        "duration_hours": 1,
+        "edges": {
+          "0x2080077b191dc78dd670771529f1577e0d4c8df4": {
+            "allow": [
+              "Renewal of monthly automated testing infrastructure and routine software maintenance services."
+            ],
+            "exclude": [],
+            "max_hops": 1,
+            "owner": "0x2080077b191dc78dd670771529f1577e0d4c8df4",
+            "signed_at": 1794900223,
+            "to": "0xf4c46af7b77154d148f85e6ddabf8f7d41da144e",
+            "version": 1
+          },
+          "0x70645451e6849757c77ebb82496268b2ff8e7287": {
+            "allow": [
+              "Editing the content of documentation pages only."
+            ],
+            "exclude": [],
+            "max_hops": 2,
+            "owner": "0x70645451e6849757c77ebb82496268b2ff8e7287",
+            "signed_at": 1794900259,
+            "to": "0xda321ca5a7f1dd078c62e78bbdeb020fc1739609",
+            "version": 1
+          },
+          "0x76f02f2b3b30f2e2dff7a93110afc09f3990f7fc": {
+            "allow": [
+              "Renewal of monthly automated testing infrastructure and routine software maintenance services."
+            ],
+            "exclude": [],
+            "max_hops": 2,
+            "owner": "0x76f02f2b3b30f2e2dff7a93110afc09f3990f7fc",
+            "signed_at": 1794900351,
+            "to": "0xda321ca5a7f1dd078c62e78bbdeb020fc1739609",
+            "version": 1
+          },
+          "0xb12b010db0457b577391cc28df1d10ec11eb1bc8": {
+            "allow": [
+              "Decisions about things that are good for the community."
+            ],
+            "exclude": [],
+            "max_hops": 1,
+            "owner": "0xb12b010db0457b577391cc28df1d10ec11eb1bc8",
+            "signed_at": 1794900397,
+            "to": "0xf4c46af7b77154d148f85e6ddabf8f7d41da144e",
+            "version": 1
+          },
+          "0xcfdccbf6fd5a604d9a74fb96b336f679b9554b4a": {
+            "allow": [
+              "Renewal of monthly automated testing infrastructure and routine software maintenance services."
+            ],
+            "exclude": [
+              "Personnel appointments or removals."
+            ],
+            "max_hops": 2,
+            "owner": "0xcfdccbf6fd5a604d9a74fb96b336f679b9554b4a",
+            "signed_at": 1794900179,
+            "to": "0x2080077b191dc78dd670771529f1577e0d4c8df4",
+            "version": 1
+          },
+          "0xda321ca5a7f1dd078c62e78bbdeb020fc1739609": {
+            "allow": [
+              "Renewal of monthly automated testing infrastructure and routine software maintenance services."
+            ],
+            "exclude": [],
+            "max_hops": 2,
+            "owner": "0xda321ca5a7f1dd078c62e78bbdeb020fc1739609",
+            "signed_at": 1794900308,
+            "to": "0x76f02f2b3b30f2e2dff7a93110afc09f3990f7fc",
+            "version": 1
+          }
+        },
+        "members": [
+          "0xcfdccbf6fd5a604d9a74fb96b336f679b9554b4a",
+          "0x2080077b191dc78dd670771529f1577e0d4c8df4",
+          "0xf4c46af7b77154d148f85e6ddabf8f7d41da144e",
+          "0x0829340c9244d2b254ea77aec12efbba2d3afcff",
+          "0x70645451e6849757c77ebb82496268b2ff8e7287",
+          "0xda321ca5a7f1dd078c62e78bbdeb020fc1739609",
+          "0x76f02f2b3b30f2e2dff7a93110afc09f3990f7fc",
+          "0xb12b010db0457b577391cc28df1d10ec11eb1bc8"
+        ],
+        "names": {
+          "0x0829340c9244d2b254ea77aec12efbba2d3afcff": "Devon",
+          "0x2080077b191dc78dd670771529f1577e0d4c8df4": "Rowan",
+          "0x70645451e6849757c77ebb82496268b2ff8e7287": "Emery",
+          "0x76f02f2b3b30f2e2dff7a93110afc09f3990f7fc": "Gray",
+          "0xb12b010db0457b577391cc28df1d10ec11eb1bc8": "Harper",
+          "0xcfdccbf6fd5a604d9a74fb96b336f679b9554b4a": "Alex",
+          "0xda321ca5a7f1dd078c62e78bbdeb020fc1739609": "Finley",
+          "0xf4c46af7b77154d148f85e6ddabf8f7d41da144e": "Casey"
+        },
+        "protocol": "mandateflow-1",
+        "quorum": 5,
+        "space_revision": 20,
+        "title": "Renew one month of testing infrastructure"
+      },
+      "snapshot_hash": "368bfade7507b55ab31394f8ec619fc0c26fba705538f7570a34b7fe27ad23b9",
+      "space_id": "0xcfdccbf6fd5a604d9a74fb96b336f679b9554b4a:open-harbor",
+      "state": "ASSESSING"
+    },
+    "assessed": {
+      "ballots": {},
+      "created_at": 1794900448,
+      "creator": "0xcfdccbf6fd5a604d9a74fb96b336f679b9554b4a",
+      "deadline": 0,
+      "eligibility": {
+        "0x2080077b191dc78dd670771529f1577e0d4c8df4": {
+          "coverage": "YES",
+          "exclusions": [],
+          "mandate_quote": "Renewal of monthly automated testing infrastructure and routine software maintenance services.",
+          "owner": "0x2080077b191dc78dd670771529f1577e0d4c8df4",
+          "proposal_quote": "Renew the automated testing infrastructure service for one month.",
+          "status": "ALLOW"
+        },
+        "0x70645451e6849757c77ebb82496268b2ff8e7287": {
+          "coverage": "NO",
+          "exclusions": [],
+          "mandate_quote": "Editing the content of documentation pages only.",
+          "owner": "0x70645451e6849757c77ebb82496268b2ff8e7287",
+          "proposal_quote": "Renew the automated testing infrastructure service for one month.",
+          "status": "DENY"
+        },
+        "0x76f02f2b3b30f2e2dff7a93110afc09f3990f7fc": {
+          "coverage": "YES",
+          "exclusions": [],
+          "mandate_quote": "Renewal of monthly automated testing infrastructure and routine software maintenance services.",
+          "owner": "0x76f02f2b3b30f2e2dff7a93110afc09f3990f7fc",
+          "proposal_quote": "Renew the automated testing infrastructure service for one month.",
+          "status": "ALLOW"
+        },
+        "0xb12b010db0457b577391cc28df1d10ec11eb1bc8": {
+          "coverage": "UNKNOWN",
+          "exclusions": [],
+          "mandate_quote": "Decisions about things that are good for the community.",
+          "owner": "0xb12b010db0457b577391cc28df1d10ec11eb1bc8",
+          "proposal_quote": "Renew the automated testing infrastructure service for one month.",
+          "status": "UNCERTAIN"
+        },
+        "0xcfdccbf6fd5a604d9a74fb96b336f679b9554b4a": {
+          "coverage": "YES",
+          "exclusions": [
+            "NO"
+          ],
+          "mandate_quote": "Renewal of monthly automated testing infrastructure and routine software maintenance services.",
+          "owner": "0xcfdccbf6fd5a604d9a74fb96b336f679b9554b4a",
+          "proposal_quote": "Renew the automated testing infrastructure service for one month. This proposal only authorizes routine software test execution infrastructure. It does not appoint or remove personnel, edit documentation content, sell assets, or change membership rules.",
+          "status": "ALLOW"
+        },
+        "0xda321ca5a7f1dd078c62e78bbdeb020fc1739609": {
+          "coverage": "YES",
+          "exclusions": [],
+          "mandate_quote": "Renewal of monthly automated testing infrastructure and routine software maintenance services.",
+          "owner": "0xda321ca5a7f1dd078c62e78bbdeb020fc1739609",
+          "proposal_quote": "Renew the automated testing infrastructure service for one month. This proposal only authorizes routine software test execution infrastructure. It does not appoint or remove personnel, edit documentation content, sell assets, or change membership rules.",
+          "status": "ALLOW"
+        }
+      },
+      "id": "0xcfdccbf6fd5a604d9a74fb96b336f679b9554b4a:open-harbor:0xcfdccbf6fd5a604d9a74fb96b336f679b9554b4a:testing-renewal",
+      "opened_at": 0,
+      "prepare_until": 1794986848,
+      "result": null,
+      "revision": 2,
+      "snapshot": {
+        "body": "Renew the automated testing infrastructure service for one month. This proposal only authorizes routine software test execution infrastructure. It does not appoint or remove personnel, edit documentation content, sell assets, or change membership rules.",
+        "duration_hours": 1,
+        "edges": {
+          "0x2080077b191dc78dd670771529f1577e0d4c8df4": {
+            "allow": [
+              "Renewal of monthly automated testing infrastructure and routine software maintenance services."
+            ],
+            "exclude": [],
+            "max_hops": 1,
+            "owner": "0x2080077b191dc78dd670771529f1577e0d4c8df4",
+            "signed_at": 1794900223,
+            "to": "0xf4c46af7b77154d148f85e6ddabf8f7d41da144e",
+            "version": 1
+          },
+          "0x70645451e6849757c77ebb82496268b2ff8e7287": {
+            "allow": [
+              "Editing the content of documentation pages only."
+            ],
+            "exclude": [],
+            "max_hops": 2,
+            "owner": "0x70645451e6849757c77ebb82496268b2ff8e7287",
+            "signed_at": 1794900259,
+            "to": "0xda321ca5a7f1dd078c62e78bbdeb020fc1739609",
+            "version": 1
+          },
+          "0x76f02f2b3b30f2e2dff7a93110afc09f3990f7fc": {
+            "allow": [
+              "Renewal of monthly automated testing infrastructure and routine software maintenance services."
+            ],
+            "exclude": [],
+            "max_hops": 2,
+            "owner": "0x76f02f2b3b30f2e2dff7a93110afc09f3990f7fc",
+            "signed_at": 1794900351,
+            "to": "0xda321ca5a7f1dd078c62e78bbdeb020fc1739609",
+            "version": 1
+          },
+          "0xb12b010db0457b577391cc28df1d10ec11eb1bc8": {
+            "allow": [
+              "Decisions about things that are good for the community."
+            ],
+            "exclude": [],
+            "max_hops": 1,
+            "owner": "0xb12b010db0457b577391cc28df1d10ec11eb1bc8",
+            "signed_at": 1794900397,
+            "to": "0xf4c46af7b77154d148f85e6ddabf8f7d41da144e",
+            "version": 1
+          },
+          "0xcfdccbf6fd5a604d9a74fb96b336f679b9554b4a": {
+            "allow": [
+              "Renewal of monthly automated testing infrastructure and routine software maintenance services."
+            ],
+            "exclude": [
+              "Personnel appointments or removals."
+            ],
+            "max_hops": 2,
+            "owner": "0xcfdccbf6fd5a604d9a74fb96b336f679b9554b4a",
+            "signed_at": 1794900179,
+            "to": "0x2080077b191dc78dd670771529f1577e0d4c8df4",
+            "version": 1
+          },
+          "0xda321ca5a7f1dd078c62e78bbdeb020fc1739609": {
+            "allow": [
+              "Renewal of monthly automated testing infrastructure and routine software maintenance services."
+            ],
+            "exclude": [],
+            "max_hops": 2,
+            "owner": "0xda321ca5a7f1dd078c62e78bbdeb020fc1739609",
+            "signed_at": 1794900308,
+            "to": "0x76f02f2b3b30f2e2dff7a93110afc09f3990f7fc",
+            "version": 1
+          }
+        },
+        "members": [
+          "0xcfdccbf6fd5a604d9a74fb96b336f679b9554b4a",
+          "0x2080077b191dc78dd670771529f1577e0d4c8df4",
+          "0xf4c46af7b77154d148f85e6ddabf8f7d41da144e",
+          "0x0829340c9244d2b254ea77aec12efbba2d3afcff",
+          "0x70645451e6849757c77ebb82496268b2ff8e7287",
+          "0xda321ca5a7f1dd078c62e78bbdeb020fc1739609",
+          "0x76f02f2b3b30f2e2dff7a93110afc09f3990f7fc",
+          "0xb12b010db0457b577391cc28df1d10ec11eb1bc8"
+        ],
+        "names": {
+          "0x0829340c9244d2b254ea77aec12efbba2d3afcff": "Devon",
+          "0x2080077b191dc78dd670771529f1577e0d4c8df4": "Rowan",
+          "0x70645451e6849757c77ebb82496268b2ff8e7287": "Emery",
+          "0x76f02f2b3b30f2e2dff7a93110afc09f3990f7fc": "Gray",
+          "0xb12b010db0457b577391cc28df1d10ec11eb1bc8": "Harper",
+          "0xcfdccbf6fd5a604d9a74fb96b336f679b9554b4a": "Alex",
+          "0xda321ca5a7f1dd078c62e78bbdeb020fc1739609": "Finley",
+          "0xf4c46af7b77154d148f85e6ddabf8f7d41da144e": "Casey"
+        },
+        "protocol": "mandateflow-1",
+        "quorum": 5,
+        "space_revision": 20,
+        "title": "Renew one month of testing infrastructure"
+      },
+      "snapshot_hash": "368bfade7507b55ab31394f8ec619fc0c26fba705538f7570a34b7fe27ad23b9",
+      "space_id": "0xcfdccbf6fd5a604d9a74fb96b336f679b9554b4a:open-harbor",
+      "state": "ASSESSING"
+    },
+    "voting": {
+      "ballots": {
+        "0x0829340c9244d2b254ea77aec12efbba2d3afcff": {
+          "at": 1794900706,
+          "choice": "NO",
+          "nonce": 1
+        },
+        "0xb12b010db0457b577391cc28df1d10ec11eb1bc8": {
+          "at": 1794900748,
+          "choice": "ABSTAIN",
+          "nonce": 1
+        },
+        "0xf4c46af7b77154d148f85e6ddabf8f7d41da144e": {
+          "at": 1794900661,
+          "choice": "YES",
+          "nonce": 1
+        }
+      },
+      "created_at": 1794900448,
+      "creator": "0xcfdccbf6fd5a604d9a74fb96b336f679b9554b4a",
+      "deadline": 1794904218,
+      "eligibility": {
+        "0x2080077b191dc78dd670771529f1577e0d4c8df4": {
+          "coverage": "YES",
+          "exclusions": [],
+          "mandate_quote": "Renewal of monthly automated testing infrastructure and routine software maintenance services.",
+          "owner": "0x2080077b191dc78dd670771529f1577e0d4c8df4",
+          "proposal_quote": "Renew the automated testing infrastructure service for one month.",
+          "status": "ALLOW"
+        },
+        "0x70645451e6849757c77ebb82496268b2ff8e7287": {
+          "coverage": "NO",
+          "exclusions": [],
+          "mandate_quote": "Editing the content of documentation pages only.",
+          "owner": "0x70645451e6849757c77ebb82496268b2ff8e7287",
+          "proposal_quote": "Renew the automated testing infrastructure service for one month.",
+          "status": "DENY"
+        },
+        "0x76f02f2b3b30f2e2dff7a93110afc09f3990f7fc": {
+          "coverage": "YES",
+          "exclusions": [],
+          "mandate_quote": "Renewal of monthly automated testing infrastructure and routine software maintenance services.",
+          "owner": "0x76f02f2b3b30f2e2dff7a93110afc09f3990f7fc",
+          "proposal_quote": "Renew the automated testing infrastructure service for one month.",
+          "status": "ALLOW"
+        },
+        "0xb12b010db0457b577391cc28df1d10ec11eb1bc8": {
+          "coverage": "UNKNOWN",
+          "exclusions": [],
+          "mandate_quote": "Decisions about things that are good for the community.",
+          "owner": "0xb12b010db0457b577391cc28df1d10ec11eb1bc8",
+          "proposal_quote": "Renew the automated testing infrastructure service for one month.",
+          "status": "UNCERTAIN"
+        },
+        "0xcfdccbf6fd5a604d9a74fb96b336f679b9554b4a": {
+          "coverage": "YES",
+          "exclusions": [
+            "NO"
+          ],
+          "mandate_quote": "Renewal of monthly automated testing infrastructure and routine software maintenance services.",
+          "owner": "0xcfdccbf6fd5a604d9a74fb96b336f679b9554b4a",
+          "proposal_quote": "Renew the automated testing infrastructure service for one month. This proposal only authorizes routine software test execution infrastructure. It does not appoint or remove personnel, edit documentation content, sell assets, or change membership rules.",
+          "status": "ALLOW"
+        },
+        "0xda321ca5a7f1dd078c62e78bbdeb020fc1739609": {
+          "coverage": "YES",
+          "exclusions": [],
+          "mandate_quote": "Renewal of monthly automated testing infrastructure and routine software maintenance services.",
+          "owner": "0xda321ca5a7f1dd078c62e78bbdeb020fc1739609",
+          "proposal_quote": "Renew the automated testing infrastructure service for one month. This proposal only authorizes routine software test execution infrastructure. It does not appoint or remove personnel, edit documentation content, sell assets, or change membership rules.",
+          "status": "ALLOW"
+        }
+      },
+      "id": "0xcfdccbf6fd5a604d9a74fb96b336f679b9554b4a:open-harbor:0xcfdccbf6fd5a604d9a74fb96b336f679b9554b4a:testing-renewal",
+      "opened_at": 1794900618,
+      "prepare_until": 1794986848,
+      "result": null,
+      "revision": 6,
+      "snapshot": {
+        "body": "Renew the automated testing infrastructure service for one month. This proposal only authorizes routine software test execution infrastructure. It does not appoint or remove personnel, edit documentation content, sell assets, or change membership rules.",
+        "duration_hours": 1,
+        "edges": {
+          "0x2080077b191dc78dd670771529f1577e0d4c8df4": {
+            "allow": [
+              "Renewal of monthly automated testing infrastructure and routine software maintenance services."
+            ],
+            "exclude": [],
+            "max_hops": 1,
+            "owner": "0x2080077b191dc78dd670771529f1577e0d4c8df4",
+            "signed_at": 1794900223,
+            "to": "0xf4c46af7b77154d148f85e6ddabf8f7d41da144e",
+            "version": 1
+          },
+          "0x70645451e6849757c77ebb82496268b2ff8e7287": {
+            "allow": [
+              "Editing the content of documentation pages only."
+            ],
+            "exclude": [],
+            "max_hops": 2,
+            "owner": "0x70645451e6849757c77ebb82496268b2ff8e7287",
+            "signed_at": 1794900259,
+            "to": "0xda321ca5a7f1dd078c62e78bbdeb020fc1739609",
+            "version": 1
+          },
+          "0x76f02f2b3b30f2e2dff7a93110afc09f3990f7fc": {
+            "allow": [
+              "Renewal of monthly automated testing infrastructure and routine software maintenance services."
+            ],
+            "exclude": [],
+            "max_hops": 2,
+            "owner": "0x76f02f2b3b30f2e2dff7a93110afc09f3990f7fc",
+            "signed_at": 1794900351,
+            "to": "0xda321ca5a7f1dd078c62e78bbdeb020fc1739609",
+            "version": 1
+          },
+          "0xb12b010db0457b577391cc28df1d10ec11eb1bc8": {
+            "allow": [
+              "Decisions about things that are good for the community."
+            ],
+            "exclude": [],
+            "max_hops": 1,
+            "owner": "0xb12b010db0457b577391cc28df1d10ec11eb1bc8",
+            "signed_at": 1794900397,
+            "to": "0xf4c46af7b77154d148f85e6ddabf8f7d41da144e",
+            "version": 1
+          },
+          "0xcfdccbf6fd5a604d9a74fb96b336f679b9554b4a": {
+            "allow": [
+              "Renewal of monthly automated testing infrastructure and routine software maintenance services."
+            ],
+            "exclude": [
+              "Personnel appointments or removals."
+            ],
+            "max_hops": 2,
+            "owner": "0xcfdccbf6fd5a604d9a74fb96b336f679b9554b4a",
+            "signed_at": 1794900179,
+            "to": "0x2080077b191dc78dd670771529f1577e0d4c8df4",
+            "version": 1
+          },
+          "0xda321ca5a7f1dd078c62e78bbdeb020fc1739609": {
+            "allow": [
+              "Renewal of monthly automated testing infrastructure and routine software maintenance services."
+            ],
+            "exclude": [],
+            "max_hops": 2,
+            "owner": "0xda321ca5a7f1dd078c62e78bbdeb020fc1739609",
+            "signed_at": 1794900308,
+            "to": "0x76f02f2b3b30f2e2dff7a93110afc09f3990f7fc",
+            "version": 1
+          }
+        },
+        "members": [
+          "0xcfdccbf6fd5a604d9a74fb96b336f679b9554b4a",
+          "0x2080077b191dc78dd670771529f1577e0d4c8df4",
+          "0xf4c46af7b77154d148f85e6ddabf8f7d41da144e",
+          "0x0829340c9244d2b254ea77aec12efbba2d3afcff",
+          "0x70645451e6849757c77ebb82496268b2ff8e7287",
+          "0xda321ca5a7f1dd078c62e78bbdeb020fc1739609",
+          "0x76f02f2b3b30f2e2dff7a93110afc09f3990f7fc",
+          "0xb12b010db0457b577391cc28df1d10ec11eb1bc8"
+        ],
+        "names": {
+          "0x0829340c9244d2b254ea77aec12efbba2d3afcff": "Devon",
+          "0x2080077b191dc78dd670771529f1577e0d4c8df4": "Rowan",
+          "0x70645451e6849757c77ebb82496268b2ff8e7287": "Emery",
+          "0x76f02f2b3b30f2e2dff7a93110afc09f3990f7fc": "Gray",
+          "0xb12b010db0457b577391cc28df1d10ec11eb1bc8": "Harper",
+          "0xcfdccbf6fd5a604d9a74fb96b336f679b9554b4a": "Alex",
+          "0xda321ca5a7f1dd078c62e78bbdeb020fc1739609": "Finley",
+          "0xf4c46af7b77154d148f85e6ddabf8f7d41da144e": "Casey"
+        },
+        "protocol": "mandateflow-1",
+        "quorum": 5,
+        "space_revision": 20,
+        "title": "Renew one month of testing infrastructure"
+      },
+      "snapshot_hash": "368bfade7507b55ab31394f8ec619fc0c26fba705538f7570a34b7fe27ad23b9",
+      "space_id": "0xcfdccbf6fd5a604d9a74fb96b336f679b9554b4a:open-harbor",
+      "state": "VOTING"
+    },
+    "preview": {
+      "final": false,
+      "result": {
+        "member_count": 8,
+        "participating": 5,
+        "quorum": 5,
+        "result": "PASSED",
+        "routes": [
+          {
+            "choice": "YES",
+            "origin": "0xcfdccbf6fd5a604d9a74fb96b336f679b9554b4a",
+            "path": [
+              "0xcfdccbf6fd5a604d9a74fb96b336f679b9554b4a",
+              "0x2080077b191dc78dd670771529f1577e0d4c8df4",
+              "0xf4c46af7b77154d148f85e6ddabf8f7d41da144e"
+            ],
+            "reason": "DELEGATED",
+            "terminal": "0xf4c46af7b77154d148f85e6ddabf8f7d41da144e"
+          },
+          {
+            "choice": "YES",
+            "origin": "0x2080077b191dc78dd670771529f1577e0d4c8df4",
+            "path": [
+              "0x2080077b191dc78dd670771529f1577e0d4c8df4",
+              "0xf4c46af7b77154d148f85e6ddabf8f7d41da144e"
+            ],
+            "reason": "DELEGATED",
+            "terminal": "0xf4c46af7b77154d148f85e6ddabf8f7d41da144e"
+          },
+          {
+            "choice": "YES",
+            "origin": "0xf4c46af7b77154d148f85e6ddabf8f7d41da144e",
+            "path": [
+              "0xf4c46af7b77154d148f85e6ddabf8f7d41da144e"
+            ],
+            "reason": "DIRECT",
+            "terminal": "0xf4c46af7b77154d148f85e6ddabf8f7d41da144e"
+          },
+          {
+            "choice": "NO",
+            "origin": "0x0829340c9244d2b254ea77aec12efbba2d3afcff",
+            "path": [
+              "0x0829340c9244d2b254ea77aec12efbba2d3afcff"
+            ],
+            "reason": "DIRECT",
+            "terminal": "0x0829340c9244d2b254ea77aec12efbba2d3afcff"
+          },
+          {
+            "choice": "UNEXPRESSED",
+            "origin": "0x70645451e6849757c77ebb82496268b2ff8e7287",
+            "path": [
+              "0x70645451e6849757c77ebb82496268b2ff8e7287"
+            ],
+            "reason": "OUT_OF_SCOPE",
+            "terminal": ""
+          },
+          {
+            "choice": "UNEXPRESSED",
+            "origin": "0xda321ca5a7f1dd078c62e78bbdeb020fc1739609",
+            "path": [
+              "0xda321ca5a7f1dd078c62e78bbdeb020fc1739609",
+              "0x76f02f2b3b30f2e2dff7a93110afc09f3990f7fc",
+              "0xda321ca5a7f1dd078c62e78bbdeb020fc1739609"
+            ],
+            "reason": "CYCLE",
+            "terminal": ""
+          },
+          {
+            "choice": "UNEXPRESSED",
+            "origin": "0x76f02f2b3b30f2e2dff7a93110afc09f3990f7fc",
+            "path": [
+              "0x76f02f2b3b30f2e2dff7a93110afc09f3990f7fc",
+              "0xda321ca5a7f1dd078c62e78bbdeb020fc1739609",
+              "0x76f02f2b3b30f2e2dff7a93110afc09f3990f7fc"
+            ],
+            "reason": "CYCLE",
+            "terminal": ""
+          },
+          {
+            "choice": "ABSTAIN",
+            "origin": "0xb12b010db0457b577391cc28df1d10ec11eb1bc8",
+            "path": [
+              "0xb12b010db0457b577391cc28df1d10ec11eb1bc8"
+            ],
+            "reason": "DIRECT",
+            "terminal": "0xb12b010db0457b577391cc28df1d10ec11eb1bc8"
+          }
+        ],
+        "totals": {
+          "ABSTAIN": 1,
+          "NO": 1,
+          "UNEXPRESSED": 3,
+          "YES": 3
+        }
+      },
+      "snapshot_hash": "368bfade7507b55ab31394f8ec619fc0c26fba705538f7570a34b7fe27ad23b9"
+    },
+    "settled": {
+      "ballots": {
+        "0x0829340c9244d2b254ea77aec12efbba2d3afcff": {
+          "at": 1794900706,
+          "choice": "NO",
+          "nonce": 1
+        },
+        "0xb12b010db0457b577391cc28df1d10ec11eb1bc8": {
+          "at": 1794900748,
+          "choice": "ABSTAIN",
+          "nonce": 1
+        },
+        "0xf4c46af7b77154d148f85e6ddabf8f7d41da144e": {
+          "at": 1794900661,
+          "choice": "YES",
+          "nonce": 1
+        }
+      },
+      "created_at": 1794900448,
+      "creator": "0xcfdccbf6fd5a604d9a74fb96b336f679b9554b4a",
+      "deadline": 1794904218,
+      "eligibility": {
+        "0x2080077b191dc78dd670771529f1577e0d4c8df4": {
+          "coverage": "YES",
+          "exclusions": [],
+          "mandate_quote": "Renewal of monthly automated testing infrastructure and routine software maintenance services.",
+          "owner": "0x2080077b191dc78dd670771529f1577e0d4c8df4",
+          "proposal_quote": "Renew the automated testing infrastructure service for one month.",
+          "status": "ALLOW"
+        },
+        "0x70645451e6849757c77ebb82496268b2ff8e7287": {
+          "coverage": "NO",
+          "exclusions": [],
+          "mandate_quote": "Editing the content of documentation pages only.",
+          "owner": "0x70645451e6849757c77ebb82496268b2ff8e7287",
+          "proposal_quote": "Renew the automated testing infrastructure service for one month.",
+          "status": "DENY"
+        },
+        "0x76f02f2b3b30f2e2dff7a93110afc09f3990f7fc": {
+          "coverage": "YES",
+          "exclusions": [],
+          "mandate_quote": "Renewal of monthly automated testing infrastructure and routine software maintenance services.",
+          "owner": "0x76f02f2b3b30f2e2dff7a93110afc09f3990f7fc",
+          "proposal_quote": "Renew the automated testing infrastructure service for one month.",
+          "status": "ALLOW"
+        },
+        "0xb12b010db0457b577391cc28df1d10ec11eb1bc8": {
+          "coverage": "UNKNOWN",
+          "exclusions": [],
+          "mandate_quote": "Decisions about things that are good for the community.",
+          "owner": "0xb12b010db0457b577391cc28df1d10ec11eb1bc8",
+          "proposal_quote": "Renew the automated testing infrastructure service for one month.",
+          "status": "UNCERTAIN"
+        },
+        "0xcfdccbf6fd5a604d9a74fb96b336f679b9554b4a": {
+          "coverage": "YES",
+          "exclusions": [
+            "NO"
+          ],
+          "mandate_quote": "Renewal of monthly automated testing infrastructure and routine software maintenance services.",
+          "owner": "0xcfdccbf6fd5a604d9a74fb96b336f679b9554b4a",
+          "proposal_quote": "Renew the automated testing infrastructure service for one month. This proposal only authorizes routine software test execution infrastructure. It does not appoint or remove personnel, edit documentation content, sell assets, or change membership rules.",
+          "status": "ALLOW"
+        },
+        "0xda321ca5a7f1dd078c62e78bbdeb020fc1739609": {
+          "coverage": "YES",
+          "exclusions": [],
+          "mandate_quote": "Renewal of monthly automated testing infrastructure and routine software maintenance services.",
+          "owner": "0xda321ca5a7f1dd078c62e78bbdeb020fc1739609",
+          "proposal_quote": "Renew the automated testing infrastructure service for one month. This proposal only authorizes routine software test execution infrastructure. It does not appoint or remove personnel, edit documentation content, sell assets, or change membership rules.",
+          "status": "ALLOW"
+        }
+      },
+      "id": "0xcfdccbf6fd5a604d9a74fb96b336f679b9554b4a:open-harbor:0xcfdccbf6fd5a604d9a74fb96b336f679b9554b4a:testing-renewal",
+      "opened_at": 1794900618,
+      "prepare_until": 1794986848,
+      "result": {
+        "certificate_hash": "b41e22e6a3ef4b8b8ac4bc3ee3c16454625b839ebc6ed41a662aefa589f1aa5e",
+        "member_count": 8,
+        "participating": 5,
+        "quorum": 5,
+        "result": "PASSED",
+        "routes": [
+          {
+            "choice": "YES",
+            "origin": "0xcfdccbf6fd5a604d9a74fb96b336f679b9554b4a",
+            "path": [
+              "0xcfdccbf6fd5a604d9a74fb96b336f679b9554b4a",
+              "0x2080077b191dc78dd670771529f1577e0d4c8df4",
+              "0xf4c46af7b77154d148f85e6ddabf8f7d41da144e"
+            ],
+            "reason": "DELEGATED",
+            "terminal": "0xf4c46af7b77154d148f85e6ddabf8f7d41da144e"
+          },
+          {
+            "choice": "YES",
+            "origin": "0x2080077b191dc78dd670771529f1577e0d4c8df4",
+            "path": [
+              "0x2080077b191dc78dd670771529f1577e0d4c8df4",
+              "0xf4c46af7b77154d148f85e6ddabf8f7d41da144e"
+            ],
+            "reason": "DELEGATED",
+            "terminal": "0xf4c46af7b77154d148f85e6ddabf8f7d41da144e"
+          },
+          {
+            "choice": "YES",
+            "origin": "0xf4c46af7b77154d148f85e6ddabf8f7d41da144e",
+            "path": [
+              "0xf4c46af7b77154d148f85e6ddabf8f7d41da144e"
+            ],
+            "reason": "DIRECT",
+            "terminal": "0xf4c46af7b77154d148f85e6ddabf8f7d41da144e"
+          },
+          {
+            "choice": "NO",
+            "origin": "0x0829340c9244d2b254ea77aec12efbba2d3afcff",
+            "path": [
+              "0x0829340c9244d2b254ea77aec12efbba2d3afcff"
+            ],
+            "reason": "DIRECT",
+            "terminal": "0x0829340c9244d2b254ea77aec12efbba2d3afcff"
+          },
+          {
+            "choice": "UNEXPRESSED",
+            "origin": "0x70645451e6849757c77ebb82496268b2ff8e7287",
+            "path": [
+              "0x70645451e6849757c77ebb82496268b2ff8e7287"
+            ],
+            "reason": "OUT_OF_SCOPE",
+            "terminal": ""
+          },
+          {
+            "choice": "UNEXPRESSED",
+            "origin": "0xda321ca5a7f1dd078c62e78bbdeb020fc1739609",
+            "path": [
+              "0xda321ca5a7f1dd078c62e78bbdeb020fc1739609",
+              "0x76f02f2b3b30f2e2dff7a93110afc09f3990f7fc",
+              "0xda321ca5a7f1dd078c62e78bbdeb020fc1739609"
+            ],
+            "reason": "CYCLE",
+            "terminal": ""
+          },
+          {
+            "choice": "UNEXPRESSED",
+            "origin": "0x76f02f2b3b30f2e2dff7a93110afc09f3990f7fc",
+            "path": [
+              "0x76f02f2b3b30f2e2dff7a93110afc09f3990f7fc",
+              "0xda321ca5a7f1dd078c62e78bbdeb020fc1739609",
+              "0x76f02f2b3b30f2e2dff7a93110afc09f3990f7fc"
+            ],
+            "reason": "CYCLE",
+            "terminal": ""
+          },
+          {
+            "choice": "ABSTAIN",
+            "origin": "0xb12b010db0457b577391cc28df1d10ec11eb1bc8",
+            "path": [
+              "0xb12b010db0457b577391cc28df1d10ec11eb1bc8"
+            ],
+            "reason": "DIRECT",
+            "terminal": "0xb12b010db0457b577391cc28df1d10ec11eb1bc8"
+          }
+        ],
+        "settled_at": 1794912034,
+        "snapshot_hash": "368bfade7507b55ab31394f8ec619fc0c26fba705538f7570a34b7fe27ad23b9",
+        "totals": {
+          "ABSTAIN": 1,
+          "NO": 1,
+          "UNEXPRESSED": 3,
+          "YES": 3
+        }
+      },
+      "revision": 7,
+      "snapshot": {
+        "body": "Renew the automated testing infrastructure service for one month. This proposal only authorizes routine software test execution infrastructure. It does not appoint or remove personnel, edit documentation content, sell assets, or change membership rules.",
+        "duration_hours": 1,
+        "edges": {
+          "0x2080077b191dc78dd670771529f1577e0d4c8df4": {
+            "allow": [
+              "Renewal of monthly automated testing infrastructure and routine software maintenance services."
+            ],
+            "exclude": [],
+            "max_hops": 1,
+            "owner": "0x2080077b191dc78dd670771529f1577e0d4c8df4",
+            "signed_at": 1794900223,
+            "to": "0xf4c46af7b77154d148f85e6ddabf8f7d41da144e",
+            "version": 1
+          },
+          "0x70645451e6849757c77ebb82496268b2ff8e7287": {
+            "allow": [
+              "Editing the content of documentation pages only."
+            ],
+            "exclude": [],
+            "max_hops": 2,
+            "owner": "0x70645451e6849757c77ebb82496268b2ff8e7287",
+            "signed_at": 1794900259,
+            "to": "0xda321ca5a7f1dd078c62e78bbdeb020fc1739609",
+            "version": 1
+          },
+          "0x76f02f2b3b30f2e2dff7a93110afc09f3990f7fc": {
+            "allow": [
+              "Renewal of monthly automated testing infrastructure and routine software maintenance services."
+            ],
+            "exclude": [],
+            "max_hops": 2,
+            "owner": "0x76f02f2b3b30f2e2dff7a93110afc09f3990f7fc",
+            "signed_at": 1794900351,
+            "to": "0xda321ca5a7f1dd078c62e78bbdeb020fc1739609",
+            "version": 1
+          },
+          "0xb12b010db0457b577391cc28df1d10ec11eb1bc8": {
+            "allow": [
+              "Decisions about things that are good for the community."
+            ],
+            "exclude": [],
+            "max_hops": 1,
+            "owner": "0xb12b010db0457b577391cc28df1d10ec11eb1bc8",
+            "signed_at": 1794900397,
+            "to": "0xf4c46af7b77154d148f85e6ddabf8f7d41da144e",
+            "version": 1
+          },
+          "0xcfdccbf6fd5a604d9a74fb96b336f679b9554b4a": {
+            "allow": [
+              "Renewal of monthly automated testing infrastructure and routine software maintenance services."
+            ],
+            "exclude": [
+              "Personnel appointments or removals."
+            ],
+            "max_hops": 2,
+            "owner": "0xcfdccbf6fd5a604d9a74fb96b336f679b9554b4a",
+            "signed_at": 1794900179,
+            "to": "0x2080077b191dc78dd670771529f1577e0d4c8df4",
+            "version": 1
+          },
+          "0xda321ca5a7f1dd078c62e78bbdeb020fc1739609": {
+            "allow": [
+              "Renewal of monthly automated testing infrastructure and routine software maintenance services."
+            ],
+            "exclude": [],
+            "max_hops": 2,
+            "owner": "0xda321ca5a7f1dd078c62e78bbdeb020fc1739609",
+            "signed_at": 1794900308,
+            "to": "0x76f02f2b3b30f2e2dff7a93110afc09f3990f7fc",
+            "version": 1
+          }
+        },
+        "members": [
+          "0xcfdccbf6fd5a604d9a74fb96b336f679b9554b4a",
+          "0x2080077b191dc78dd670771529f1577e0d4c8df4",
+          "0xf4c46af7b77154d148f85e6ddabf8f7d41da144e",
+          "0x0829340c9244d2b254ea77aec12efbba2d3afcff",
+          "0x70645451e6849757c77ebb82496268b2ff8e7287",
+          "0xda321ca5a7f1dd078c62e78bbdeb020fc1739609",
+          "0x76f02f2b3b30f2e2dff7a93110afc09f3990f7fc",
+          "0xb12b010db0457b577391cc28df1d10ec11eb1bc8"
+        ],
+        "names": {
+          "0x0829340c9244d2b254ea77aec12efbba2d3afcff": "Devon",
+          "0x2080077b191dc78dd670771529f1577e0d4c8df4": "Rowan",
+          "0x70645451e6849757c77ebb82496268b2ff8e7287": "Emery",
+          "0x76f02f2b3b30f2e2dff7a93110afc09f3990f7fc": "Gray",
+          "0xb12b010db0457b577391cc28df1d10ec11eb1bc8": "Harper",
+          "0xcfdccbf6fd5a604d9a74fb96b336f679b9554b4a": "Alex",
+          "0xda321ca5a7f1dd078c62e78bbdeb020fc1739609": "Finley",
+          "0xf4c46af7b77154d148f85e6ddabf8f7d41da144e": "Casey"
+        },
+        "protocol": "mandateflow-1",
+        "quorum": 5,
+        "space_revision": 20,
+        "title": "Renew one month of testing infrastructure"
+      },
+      "snapshot_hash": "368bfade7507b55ab31394f8ec619fc0c26fba705538f7570a34b7fe27ad23b9",
+      "space_id": "0xcfdccbf6fd5a604d9a74fb96b336f679b9554b4a:open-harbor",
+      "state": "SETTLED"
+    },
+    "final-preview": {
+      "final": true,
+      "result": {
+        "certificate_hash": "b41e22e6a3ef4b8b8ac4bc3ee3c16454625b839ebc6ed41a662aefa589f1aa5e",
+        "member_count": 8,
+        "participating": 5,
+        "quorum": 5,
+        "result": "PASSED",
+        "routes": [
+          {
+            "choice": "YES",
+            "origin": "0xcfdccbf6fd5a604d9a74fb96b336f679b9554b4a",
+            "path": [
+              "0xcfdccbf6fd5a604d9a74fb96b336f679b9554b4a",
+              "0x2080077b191dc78dd670771529f1577e0d4c8df4",
+              "0xf4c46af7b77154d148f85e6ddabf8f7d41da144e"
+            ],
+            "reason": "DELEGATED",
+            "terminal": "0xf4c46af7b77154d148f85e6ddabf8f7d41da144e"
+          },
+          {
+            "choice": "YES",
+            "origin": "0x2080077b191dc78dd670771529f1577e0d4c8df4",
+            "path": [
+              "0x2080077b191dc78dd670771529f1577e0d4c8df4",
+              "0xf4c46af7b77154d148f85e6ddabf8f7d41da144e"
+            ],
+            "reason": "DELEGATED",
+            "terminal": "0xf4c46af7b77154d148f85e6ddabf8f7d41da144e"
+          },
+          {
+            "choice": "YES",
+            "origin": "0xf4c46af7b77154d148f85e6ddabf8f7d41da144e",
+            "path": [
+              "0xf4c46af7b77154d148f85e6ddabf8f7d41da144e"
+            ],
+            "reason": "DIRECT",
+            "terminal": "0xf4c46af7b77154d148f85e6ddabf8f7d41da144e"
+          },
+          {
+            "choice": "NO",
+            "origin": "0x0829340c9244d2b254ea77aec12efbba2d3afcff",
+            "path": [
+              "0x0829340c9244d2b254ea77aec12efbba2d3afcff"
+            ],
+            "reason": "DIRECT",
+            "terminal": "0x0829340c9244d2b254ea77aec12efbba2d3afcff"
+          },
+          {
+            "choice": "UNEXPRESSED",
+            "origin": "0x70645451e6849757c77ebb82496268b2ff8e7287",
+            "path": [
+              "0x70645451e6849757c77ebb82496268b2ff8e7287"
+            ],
+            "reason": "OUT_OF_SCOPE",
+            "terminal": ""
+          },
+          {
+            "choice": "UNEXPRESSED",
+            "origin": "0xda321ca5a7f1dd078c62e78bbdeb020fc1739609",
+            "path": [
+              "0xda321ca5a7f1dd078c62e78bbdeb020fc1739609",
+              "0x76f02f2b3b30f2e2dff7a93110afc09f3990f7fc",
+              "0xda321ca5a7f1dd078c62e78bbdeb020fc1739609"
+            ],
+            "reason": "CYCLE",
+            "terminal": ""
+          },
+          {
+            "choice": "UNEXPRESSED",
+            "origin": "0x76f02f2b3b30f2e2dff7a93110afc09f3990f7fc",
+            "path": [
+              "0x76f02f2b3b30f2e2dff7a93110afc09f3990f7fc",
+              "0xda321ca5a7f1dd078c62e78bbdeb020fc1739609",
+              "0x76f02f2b3b30f2e2dff7a93110afc09f3990f7fc"
+            ],
+            "reason": "CYCLE",
+            "terminal": ""
+          },
+          {
+            "choice": "ABSTAIN",
+            "origin": "0xb12b010db0457b577391cc28df1d10ec11eb1bc8",
+            "path": [
+              "0xb12b010db0457b577391cc28df1d10ec11eb1bc8"
+            ],
+            "reason": "DIRECT",
+            "terminal": "0xb12b010db0457b577391cc28df1d10ec11eb1bc8"
+          }
+        ],
+        "settled_at": 1794912034,
+        "snapshot_hash": "368bfade7507b55ab31394f8ec619fc0c26fba705538f7570a34b7fe27ad23b9",
+        "totals": {
+          "ABSTAIN": 1,
+          "NO": 1,
+          "UNEXPRESSED": 3,
+          "YES": 3
+        }
+      },
+      "snapshot_hash": "368bfade7507b55ab31394f8ec619fc0c26fba705538f7570a34b7fe27ad23b9"
+    }
+  },
+  "started_at": "2026-11-17T07:09:50.923Z",
+  "source_sha256": "2ff09c3b9c110ba845f2eedc19c9b107ad9690c6edc8875095ae5a372c195b37",
+  "funded": true,
+  "contract": "0xAbF34de3273BDbF463Ea8d5b944D746394bd12F6",
+  "space": "0xcfdccbf6fd5a604d9a74fb96b336f679b9554b4a:open-harbor",
+  "proposal": "0xcfdccbf6fd5a604d9a74fb96b336f679b9554b4a:open-harbor:0xcfdccbf6fd5a604d9a74fb96b336f679b9554b4a:testing-renewal",
+  "completed_at": "2026-11-17T10:42:14.674Z"
+}

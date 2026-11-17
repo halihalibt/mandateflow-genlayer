@@ -9,7 +9,9 @@ const code=await client.getContractCode(d.contract);
 assert.equal(code,fs.readFileSync('contracts/mandate_flow.py','utf8'));
 assert.equal(crypto.createHash('sha256').update(code).digest('hex'),d.source_sha256);
 const receipts=[];
-for(const t of j.transactions){
+const adversarial=JSON.parse(fs.readFileSync('evidence/adversarial.json'));
+assert(adversarial.completed_at,'Adversarial acceptance must be complete');
+for(const t of [...j.transactions,...adversarial.transactions]){
  const r=await client.getTransaction({hash:t.hash});
  assert.equal(r.statusName,'FINALIZED',t.label);
  const leaders=r.consensus_data?.leader_receipt;
@@ -35,6 +37,8 @@ assert.equal(p.result.result,'PASSED');assert.equal(p.result.participating,5);
 const ordered={};const canonical=v=>JSON.stringify(v,(_,x)=>{if(x&&typeof x==='object'&&!Array.isArray(x)){return Object.fromEntries(Object.keys(x).sort().map(k=>[k,x[k]]))}return x});
 const snapshotDigest=crypto.createHash('sha256').update(canonical(p.snapshot)).digest('hex');assert.equal(snapshotDigest,p.snapshot_hash);
 assert.equal(p.eligibility[j.actors[4].address].status,'DENY');assert.equal(p.eligibility[j.actors[7].address].status,'UNCERTAIN');
-const out={verified_at:new Date().toISOString(),contract:d.contract,source_sha256:d.source_sha256,snapshot_sha256:snapshotDigest,receipts,proposal:p};
+const mixed=await get('get_proposal',[adversarial.records.cancelled.id]);
+assert.equal(mixed.state,'CANCELLED');assert.equal(mixed.eligibility[j.actors[0].address].status,'DENY');assert.equal(mixed.eligibility[j.actors[0].address].exclusions[0],'YES');
+const out={adversarial_proposal:mixed,verified_at:new Date().toISOString(),contract:d.contract,source_sha256:d.source_sha256,snapshot_sha256:snapshotDigest,receipts,proposal:p};
 fs.writeFileSync('evidence/verification.json',stringify(out));
 console.log('Independent verification passed:',receipts.length,'finalized transactions; conserved 8 original votes.');

@@ -8,11 +8,19 @@
 
 ## Network and product acceptance
 
-The recorded acceptance flow uses eight independently signing synthetic members and actual GenLayer full consensus. All texts, members and governance decisions are test declarations. No real organization, money or personnel action is affected.
+The canonical source SHA-256 is `2ff09c3b9c110ba845f2eedc19c9b107ad9690c6edc8875095ae5a372c195b37`. Contract `0xAbF34de3273BDbF463Ea8d5b944D746394bd12F6` was deployed with full consensus on Stable Studionet 61999. The independent verifier matches deployed code byte-for-byte, checks the manifest digest and verifies every recorded method/argument against actual receipt calldata.
 
-The acceptance journal records intents and hashes before waiting, with normalized receipt status, execution result, actual votes and finalized getter readbacks. The independent verifier re-fetches receipts, verifies calldata against intents, compares the exact deployed source and validates the conserved final result. Completion status is reported by the journal and read-only verification output, not assumed from local tests.
+The main acceptance journal has 33 FINALIZED transactions: 30 successful operations and three expected execution errors (wrong ballot nonce, premature settlement, settlement replay). Its eight independently signing synthetic members complete invitations, scope-bound mandates, a frozen proposal, two consensus batches, opening, direct ballots and settlement after the real one-hour minimum. The final counts are YES 3, NO 1, ABSTAIN 1, UNEXPRESSED 3; participation/quorum is 5/5 and PASSED.
 
-Browser validation and its observed limits will be recorded here when complete.
+Four delegation edges are ALLOW, one DENY and one UNCERTAIN. The uncertain member's direct ABSTAIN correctly overrides the disabled default. Two unexpressed votes terminate in a cycle; the third is blocked by scope. `scripts/verify-proof.py` independently checks each original path, hop budget, termination reason, conservation, quorum and the final certificate without importing the contract or a model/SDK.
+
+Five additional FINALIZED transactions cover a mixed testing/personnel proposal containing hostile embedded model instructions. The original exclusion is still independently classified YES and the edge DENY. Opening with incomplete scope review and an outsider's ballot both fail with execution errors. The adversarial preparation is cancelled, retaining its evidence. Total independently re-fetched primary/adversarial receipts: 38 (33 successful executions, five expected errors). Observed votes are recorded as returned; no unanimity claim is made.
+
+Browser acceptance uses an explicitly labeled in-memory temporary signer and direct HTTPS RPC: create space → freeze → open → direct YES, with successful finalized readbacks. Reload loses signing access as documented and restores the public record. A fresh temporary signer performs permissionless settlement on the deployed public website after the real deadline. `evidence/browser.json` records the actual hashes and final state; it does not assert branded extension-wallet signing.
+
+The public English application is built successfully and checked in Chrome: finalized proposal/graph/results, authorization drawers, route selection, keyboard dismissal, transaction center and deep-link reload. Responsive layout is checked at desktop width and a 340-CSS-pixel narrow layout using browser zoom; this is CSS-layout coverage, not a physical mobile-wallet test. The narrow layout uses readable path lists instead of shrinking graph labels. Decorative overflow and short-height navigation scrolling were corrected.
+
+All member identities, proposal content and choices are synthetic test declarations. No real organization, funds or personnel action is affected. Model calls, signatures, consensus, contract writes and final-state reads are real. No RPC or onchain results are mocked in these records.
 
 ## Limits
 

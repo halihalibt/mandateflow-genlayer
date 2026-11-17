@@ -4,7 +4,11 @@
 
 A scope-bound delegation application for small member collectives on GenLayer. Members sign an allowed scope, explicit exclusions and a redelegation limit. Independent validator reasoning determines whether the entire frozen proposal fits each mandate. Deterministic contract code then routes every original vote, handles direct overrides and cycles, and accounts for each member exactly once.
 
-**Development status:** contract deployed with exact source verification; real multi-member acceptance and complete application verification in progress. The published deployment manifest and acceptance journal are authoritative. No completed acceptance claim is made at this stage.
+[Open the application](https://halihalibt.github.io/mandateflow-genlayer/) · [Contract](https://explorer-studio.genlayer.com/address/0xAbF34de3273BDbF463Ea8d5b944D746394bd12F6)
+
+**Deployed and verified on Stable Studionet.** The eight-member full-consensus lifecycle is SETTLED: 3 YES, 1 NO, 1 ABSTAIN and 3 UNEXPRESSED, with quorum 5 and PASSED. Independent verification re-fetches all 38 primary/adversarial transactions, compares deployed source byte-for-byte, checks calldata and validates the final snapshot and counts. The observed scope decisions include ALLOW, DENY and UNCERTAIN; these are real contract records, not seeded frontend data.
+
+To review without a wallet, open the application → Proposal detail → Voting results. Select a member to follow their original vote, or open an authorization edge to inspect its frozen scope and quotation anchors. The default example is synthetic governance content with real signatures, consensus, writes and finalized readbacks.
 
 ## The problem
 
@@ -43,6 +47,9 @@ The application is a static Vite/React/TypeScript build. GitHub Pages deploys `d
 - Pinned JavaScript SDK: `genlayer-js@1.1.8`; Python GenVM dependency is pinned in the source header.
 - Address/source digest/deployment transaction: [`public/deployment.json`](public/deployment.json).
 - Actual transaction intents, receipts and readbacks: [`evidence/live.json`](evidence/live.json).
+- Mixed-motion/prompt-injection and permission checks: [`evidence/adversarial.json`](evidence/adversarial.json).
+- Independent source, receipt and final-state check: [`evidence/verification.json`](evidence/verification.json).
+- Real browser-signed lifecycle: [`evidence/browser.json`](evidence/browser.json).
 
 ```sh
 # GenVM interface/schema check, not an onchain business acceptance test
@@ -51,11 +58,13 @@ npm run schema
 npm run live
 # Independent read-only verification of the recorded completed flow
 npm run verify
+# Independent offline route-witness/certificate verification
+python3 scripts/verify-proof.py
 ```
 
 On Node 24 behind an inherited HTTPS proxy, use `NODE_USE_ENV_PROXY=1` for network scripts. Preserve TLS verification and platform CA configuration.
 
-`live.mjs` journals each returned hash before polling and resumes existing operations rather than sending duplicates. It refuses source changes after deployment. It creates independent temporary test accounts, uses the official Studio faucet and sends zero value. Its ignored mode-0600 signer file is solely for resuming the acceptance run. Never commit it or fund temporary accounts with valuable assets.
+`live.mjs` journals each returned hash before polling and resumes existing operations rather than sending duplicates. It refuses source changes after deployment. It creates independent temporary test accounts, uses the official Studio faucet and sends zero value. Its ignored mode-0600 signer file is solely for resuming the acceptance run and is removed after completion. A completed journal exits without generating replacement accounts or new writes. Never commit signing material or fund temporary accounts with valuable assets.
 
 The minimum voting period is genuinely one hour; the acceptance script does not skip or alter the contract clock. Run it only when intending real testnet writes. `verify.mjs` signs nothing and does not fund accounts.
 

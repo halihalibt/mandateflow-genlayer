@@ -1,0 +1,145 @@
+{
+  "observed_ui": "Cloud Chrome with direct HTTPS RPC. Initial local-preview create → freeze → open → direct YES used an explicitly created temporary session signer and matching finalized readbacks. After the real deadline a fresh session signer performed permissionless settlement through the published website. Reload restored public records and transaction monitoring without recovering the discarded key.",
+  "contract": "0xAbF34de3273BDbF463Ea8d5b944D746394bd12F6",
+  "transactions": [
+    {
+      "hash": "0x95d5330046cbdb317c6837c29d82651dd6d7164a05aab41049316e86cd500065",
+      "method": "create_space",
+      "args": [
+        "browser-grove",
+        "Browser Acceptance Grove",
+        "Browser Tester"
+      ],
+      "status": "FINALIZED",
+      "execution": "SUCCESS",
+      "leader_only": false,
+      "consensus": "MAJORITY_AGREE",
+      "sender": "0x397822011cBF86B2215D028e74f0224835e11313",
+      "target": "0xAbF34de3273BDbF463Ea8d5b944D746394bd12F6"
+    },
+    {
+      "hash": "0xa494d937080bf5b50c9776c3e340836fd93e27d03761cbf7c77d712aed143615",
+      "method": "freeze_proposal",
+      "args": [
+        "0x397822011cbf86b2215d028e74f0224835e11313:browser-grove",
+        "0",
+        "browser-testing",
+        "Browser-signed governance lifecycle",
+        "Record a synthetic testing decision to verify the public application signing, finality tracking, direct ballot and conserved result. This proposal authorizes no real spending or organisational action.",
+        "1",
+        "1"
+      ],
+      "status": "FINALIZED",
+      "execution": "SUCCESS",
+      "leader_only": false,
+      "consensus": "MAJORITY_AGREE",
+      "sender": "0x397822011cBF86B2215D028e74f0224835e11313",
+      "target": "0xAbF34de3273BDbF463Ea8d5b944D746394bd12F6"
+    },
+    {
+      "hash": "0x139cf9cb63226b7849f51999f32434c24b0a0c32bcdd830067a3337e8a082c34",
+      "method": "open_voting",
+      "args": [
+        "0x397822011cbf86b2215d028e74f0224835e11313:browser-grove:0x397822011cbf86b2215d028e74f0224835e11313:browser-testing",
+        "0"
+      ],
+      "status": "FINALIZED",
+      "execution": "SUCCESS",
+      "leader_only": false,
+      "consensus": "MAJORITY_AGREE",
+      "sender": "0x397822011cBF86B2215D028e74f0224835e11313",
+      "target": "0xAbF34de3273BDbF463Ea8d5b944D746394bd12F6"
+    },
+    {
+      "hash": "0xc0ee44acc16917f900c4e7231c5ecc4d9013498b3d95c388a0f8020aaa8b86f0",
+      "method": "cast_vote",
+      "args": [
+        "0x397822011cbf86b2215d028e74f0224835e11313:browser-grove:0x397822011cbf86b2215d028e74f0224835e11313:browser-testing",
+        "0",
+        "YES"
+      ],
+      "status": "FINALIZED",
+      "execution": "SUCCESS",
+      "leader_only": false,
+      "consensus": "MAJORITY_AGREE",
+      "sender": "0x397822011cBF86B2215D028e74f0224835e11313",
+      "target": "0xAbF34de3273BDbF463Ea8d5b944D746394bd12F6"
+    },
+    {
+      "hash": "0x3d5d5fbd40d29831e2a9f9b56644cc9f13c16db4df5e1c5ecc403047a68dd0c8",
+      "method": "settle",
+      "args": [
+        "0x397822011cbf86b2215d028e74f0224835e11313:browser-grove:0x397822011cbf86b2215d028e74f0224835e11313:browser-testing"
+      ],
+      "status": "FINALIZED",
+      "execution": "SUCCESS",
+      "leader_only": false,
+      "consensus": "MAJORITY_AGREE",
+      "sender": "0x23b52E332e7288183B793DA0C761F1072832E940",
+      "target": "0xAbF34de3273BDbF463Ea8d5b944D746394bd12F6"
+    }
+  ],
+  "proposal": {
+    "ballots": {
+      "0x397822011cbf86b2215d028e74f0224835e11313": {
+        "at": 1794900807,
+        "choice": "YES",
+        "nonce": 1
+      }
+    },
+    "created_at": 1794900622,
+    "creator": "0x397822011cbf86b2215d028e74f0224835e11313",
+    "deadline": 1794904312,
+    "eligibility": {},
+    "id": "0x397822011cbf86b2215d028e74f0224835e11313:browser-grove:0x397822011cbf86b2215d028e74f0224835e11313:browser-testing",
+    "opened_at": 1794900712,
+    "prepare_until": 1794987022,
+    "result": {
+      "certificate_hash": "06cf5e00131294757a53bf02881b4672f5af4a701d219b9f3c1a32e2f1845ba9",
+      "member_count": 1,
+      "participating": 1,
+      "quorum": 1,
+      "result": "PASSED",
+      "routes": [
+        {
+          "choice": "YES",
+          "origin": "0x397822011cbf86b2215d028e74f0224835e11313",
+          "path": [
+            "0x397822011cbf86b2215d028e74f0224835e11313"
+          ],
+          "reason": "DIRECT",
+          "terminal": "0x397822011cbf86b2215d028e74f0224835e11313"
+        }
+      ],
+      "settled_at": 1794912240,
+      "snapshot_hash": "987a8b9a2f65eea2bcd5bca5a7419aa509277cbc2d4c10c7f4a07971f391ac25",
+      "totals": {
+        "ABSTAIN": 0,
+        "NO": 0,
+        "UNEXPRESSED": 0,
+        "YES": 1
+      }
+    },
+    "revision": 3,
+    "snapshot": {
+      "body": "Record a synthetic testing decision to verify the public application signing, finality tracking, direct ballot and conserved result. This proposal authorizes no real spending or organisational action.",
+      "duration_hours": 1,
+      "edges": {},
+      "members": [
+        "0x397822011cbf86b2215d028e74f0224835e11313"
+      ],
+      "names": {
+        "0x397822011cbf86b2215d028e74f0224835e11313": "Browser Tester"
+      },
+      "protocol": "mandateflow-1",
+      "quorum": 1,
+      "space_revision": 0,
+      "title": "Browser-signed governance lifecycle"
+    },
+    "snapshot_hash": "987a8b9a2f65eea2bcd5bca5a7419aa509277cbc2d4c10c7f4a07971f391ac25",
+    "space_id": "0x397822011cbf86b2215d028e74f0224835e11313:browser-grove",
+    "state": "SETTLED"
+  },
+  "verified_at": "2026-11-17T10:45:59.846Z",
+  "completed": true
+}
