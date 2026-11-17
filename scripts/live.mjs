@@ -6,19 +6,22 @@ import {generatePrivateKey,privateKeyToAccount} from 'viem/accounts';
 import {rpc,stringify} from './network.mjs';
 const names=['Alex','Rowan','Casey','Devon','Emery','Finley','Gray','Harper'];
 fs.mkdirSync('artifacts',{recursive:true});fs.mkdirSync('evidence',{recursive:true});
+const journalFile='evidence/live.json';
+const previous=fs.existsSync(journalFile)?JSON.parse(fs.readFileSync(journalFile)):null;
+const source=fs.readFileSync('contracts/mandate_flow.py','utf8');
+const sourceHash=crypto.createHash('sha256').update(source).digest('hex');
+if(previous?.source_sha256&&previous.source_sha256!==sourceHash)throw Error('SOURCE_CHANGED_SINCE_DEPLOYMENT');
+if(previous?.completed_at){console.log('Acceptance already completed. Use npm run verify for read-only validation.');process.exit(0);}
 const keyfile='artifacts/acceptance-signers.json';
+if(previous&&!fs.existsSync(keyfile))throw Error('Pending signer file is missing. Refusing to replace acceptance accounts.');
 const keys=fs.existsSync(keyfile)?JSON.parse(fs.readFileSync(keyfile)):names.map(()=>generatePrivateKey());
 if(!fs.existsSync(keyfile))fs.writeFileSync(keyfile,JSON.stringify(keys),{mode:0o600});
 const accounts=keys.map(privateKeyToAccount), a=accounts.map(x=>x.address.toLowerCase());
 const clients=accounts.map(account=>createClient({chain:studionet,account}));
-const journalFile='evidence/live.json';
-const j=fs.existsSync(journalFile)?JSON.parse(fs.readFileSync(journalFile)):{version:1,network:61999,actors:a.map((address,i)=>({name:names[i],address})),transactions:[],records:{},started_at:new Date().toISOString()};
+const j=previous??{version:1,network:61999,actors:a.map((address,i)=>({name:names[i],address})),transactions:[],records:{},started_at:new Date().toISOString()};
 const execution=r=>r.txExecutionResultName??(Array.isArray(r.consensus_data?.leader_receipt)?r.consensus_data.leader_receipt.findLast(x=>x.mode==='leader')?.execution_result:r.consensus_data?.leader_receipt?.execution_result);
-const compact=r=>({hash:r.hash,statusName:r.statusName,txExecutionResultName:execution(r),result_name:r.result_name,from_address:r.from_address,to_address:r.to_address,data:{contract_address:r.data?.contract_address},leader_only:r.leader_only,votes:r.consensus_data?.votes,leader_result:(Array.isArray(r.consensus_data?.leader_receipt)?r.consensus_data.leader_receipt.findLast(x=>x.mode==='leader')?.result:null)});
+const compact=r=>({hash:r.hash,statusName:r.statusName,txExecutionResultName:execution(r),result_name:r.result_name,from_address:r.from_address,to_address:r.to_address,data:{contract_address:r.data?.contract_address},leader_only:r.leader_only,votes:r.votes??r.consensus_data?.votes,leader_result:r.leader_result??(Array.isArray(r.consensus_data?.leader_receipt)?r.consensus_data.leader_receipt.findLast(x=>x.mode==='leader')?.result:null)});
 const save=()=>fs.writeFileSync(journalFile,stringify(j));
-const source=fs.readFileSync('contracts/mandate_flow.py','utf8');
-const sourceHash=crypto.createHash('sha256').update(source).digest('hex');
-if(j.source_sha256 && j.source_sha256!==sourceHash)throw Error('SOURCE_CHANGED_SINCE_DEPLOYMENT');
 j.source_sha256=sourceHash;save();
 async function wait(entry){
  for(let i=0;i<360;i++){
@@ -71,7 +74,7 @@ const mandates=[
  [4,5,['Editing the content of documentation pages only.'],[],2],
  [5,6,[routine],[],2],
  [6,5,[routine],[],2],
- [7,2,['Renew testing infrastructure only if independently verified records establish that the collective had at least GBP 10,000 in audited reserves on 2026-11-01.'],[],1],
+ [7,2,['Decisions about things that are good for the community.'],[],1],
 ];
 for(const [i,t,allow,exclude,h] of mandates){const s=await read('get_space',[sid]);if(!s.mandates[a[i]])await tx('mandate-'+i,i,'set_mandate',[sid,s.revision,JSON.stringify({to:a[t],allow,exclude,max_hops:h})]);}
 let s=await record('space_before_freeze','get_space',[sid]);
@@ -94,5 +97,5 @@ while(Date.now()/1000<j.records.voting.deadline+2){await new Promise(r=>setTimeo
 await tx('settlement',0,'settle',[pid]);
 await record('settled','get_proposal',[pid]);await record('final-preview','get_preview',[pid]);
 await tx('settlement-replay',0,'settle',[pid],true);
-j.completed_at=new Date().toISOString();save();
+j.completed_at=new Date().toISOString();save();fs.unlinkSync(keyfile);
 console.log('Acceptance complete',j.contract,pid);

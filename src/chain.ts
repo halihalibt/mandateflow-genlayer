@@ -34,8 +34,19 @@ export async function session():Promise<Connection>{
  return {address:a.address.toLowerCase(),label:'Temporary testnet session',localAccount:a};
 }
 export async function read<T>(d:Deployment,fn:string,args:any[]=[]):Promise<T>{
- const raw=await reader.readContract({address:d.contract,functionName:fn,args,transactionHashVariant:'latest-final' as any});
- if(typeof raw!=='string')throw Error('Unexpected contract response.');return JSON.parse(raw);
+ for(let attempt=0;attempt<2;attempt++){
+  try{const raw=await reader.readContract({address:d.contract,functionName:fn,args,transactionHashVariant:'latest-final' as any});
+   if(typeof raw!=='string')throw Error('Unexpected contract response.');return JSON.parse(raw);
+  }catch(e:any){if(attempt===0&&/fetch|network|timeout|timed out/i.test(e.message??'')){await new Promise(r=>setTimeout(r,800));continue;}throw e;}
+ }
+ throw Error('Could not read the finalized record.');
+}
+export function explainError(e:any):string{
+ const message=String(e?.shortMessage??e?.message??e??'The operation could not complete.');
+ if(/fetch|network|timeout|timed out/i.test(message))return 'GenLayer could not be reached. Any visible record is the last successful read. Retry the read; do not repeat a pending submission.';
+ if(/rejected|denied|4001/i.test(message))return 'The selected wallet declined the request. No successful operation is being claimed.';
+ if(/STALE_REVISION|BALLOT_NONCE/i.test(message))return 'This record changed since your preview. Refresh it and review the current state before signing again.';
+ return message.replace(/Version:.*$/s,'').trim().slice(0,420);
 }
 export async function verify(d:Deployment){
  if(d.chain_id!==61999||d.rpc!=='https://studio.genlayer.com/api')throw Error('Unsupported deployment configuration.');

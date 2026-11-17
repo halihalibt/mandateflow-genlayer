@@ -5,6 +5,8 @@ import {generatePrivateKey,privateKeyToAccount} from 'viem/accounts';
 import {rpc,stringify} from './network.mjs';
 const live=JSON.parse(fs.readFileSync('evidence/live.json'));
 assert(live.records.voting,'Finish the primary preparation before this suite.');
+const existingFile='evidence/adversarial.json';
+if(fs.existsSync(existingFile)&&JSON.parse(fs.readFileSync(existingFile)).completed_at){console.log('Adversarial acceptance already complete; no transactions submitted.');process.exit(0);}
 const keys=JSON.parse(fs.readFileSync('artifacts/acceptance-signers.json'));
 const account=privateKeyToAccount(keys[0]),client=createClient({chain:studionet,account});
 const file='evidence/adversarial.json';const j=fs.existsSync(file)?JSON.parse(fs.readFileSync(file)):{transactions:[],contract:live.contract,records:{}};
@@ -36,4 +38,4 @@ const outsiderFile='artifacts/outsider.json';const key=fs.existsSync(outsiderFil
 if(!fs.existsSync(outsiderFile))fs.writeFileSync(outsiderFile,JSON.stringify(key),{mode:0o600});
 const outsider=privateKeyToAccount(key),other=createClient({chain:studionet,account:outsider});await rpc('sim_fundAccount',[outsider.address,10000]);
 await call('outsider-cannot-vote',other,'cast_vote',[live.proposal,0,'YES'],true);
-j.completed_at=new Date().toISOString();save();console.log('Adversarial scope and membership checks complete');
+j.completed_at=new Date().toISOString();save();fs.unlinkSync(outsiderFile);console.log('Adversarial scope and membership checks complete');
