@@ -1,0 +1,9 @@
+export type Choice='YES'|'NO'|'ABSTAIN';
+export type Eligibility={status:'PENDING'|'ALLOW'|'DENY'|'UNCERTAIN';coverage?:string;exclusions?:string[];proposal_quote?:string;mandate_quote?:string;reason?:string};
+export type Mandate={owner:string;to:string;allow:string[];exclude:string[];max_hops:number;version:number;signed_at:number};
+export type Space={id:string;name:string;owner:string;revision:number;members:string[];names:Record<string,string>;invited:string[];mandates:Record<string,Mandate>;proposal_ids:string[];created_at:number};
+export type Route={origin:string;path:string[];terminal:string;choice:Choice|'UNEXPRESSED';reason:string};
+export type Result={totals:Record<Choice|'UNEXPRESSED',number>;participating:number;quorum:number;member_count:number;result:string;routes:Route[];certificate_hash?:string;settled_at?:number;snapshot_hash?:string};
+export type Proposal={id:string;space_id:string;creator:string;revision:number;state:'ASSESSING'|'VOTING'|'SETTLED'|'EXPIRED'|'CANCELLED';snapshot:{title:string;body:string;members:string[];names:Record<string,string>;edges:Record<string,Mandate>;quorum:number;duration_hours:number;space_revision:number;protocol:string};snapshot_hash:string;eligibility:Record<string,Eligibility>;ballots:Record<string,{choice:Choice;nonce:number;at:number}>;created_at:number;prepare_until:number;opened_at:number;deadline:number;result:Result|null};
+export type Deployment={network:string;chain_id:number;rpc:string;contract:`0x${string}`;source_sha256:string;deploy_tx:string;protocol:string;verified_proposal:string|null;verified_space?:string};
+export type TxEntry={hash:string;method:string;args:unknown[];sender:string;contract:string;chainId:number;intent_digest:string;at:string;status:string;execution?:string;error?:string;readback?:boolean};

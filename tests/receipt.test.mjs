@@ -1,0 +1,10 @@
+import test from 'node:test';import assert from 'node:assert/strict';
+import {verifyReceiptIdentity,executionOf} from '../src/receipt.mjs';
+const t={sender:'0xabc',contract:'0xdef',method:'cast_vote',args:['p',0,'YES']};
+const r={from_address:'0xAbC',to_address:'0xDef',statusName:'FINALIZED',consensus_data:{leader_receipt:[{mode:'leader',execution_result:'SUCCESS'}]}};
+const d={method:'cast_vote',args:['p',0n,'YES']};
+test('exact receipt intent binding tolerates address casing and integer codec',()=>assert.deepEqual(verifyReceiptIdentity(r,t,d),{status:'FINALIZED',execution:'SUCCESS'}));
+test('a finalized error remains an execution failure',()=>assert.equal(executionOf({...r,txExecutionResultName:'ERROR'}),'ERROR'));
+test('accepted does not become finalized',()=>assert.equal(verifyReceiptIdentity({...r,statusName:'ACCEPTED'},t,d).status,'ACCEPTED'));
+test('receipt for another sender, target, method or ballot is rejected',()=>{assert.throws(()=>verifyReceiptIdentity({...r,from_address:'0xbad'},t,d));assert.throws(()=>verifyReceiptIdentity({...r,to_address:'0xbad'},t,d));assert.throws(()=>verifyReceiptIdentity(r,t,{...d,method:'settle'}));assert.throws(()=>verifyReceiptIdentity(r,t,{...d,args:['p',0,'NO']}));});
+test('missing decoded intent cannot be accepted',()=>assert.throws(()=>verifyReceiptIdentity(r,t,undefined)));
