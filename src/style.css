@@ -14,3 +14,5 @@
 @media(max-width:760px){.intro{overflow:hidden}}
 .sidebar{overflow-y:auto}.sidebar nav,.sidebar-footer{flex-shrink:0}.mobile-scrim{display:none}
 @media(max-width:760px){.mobile-scrim{display:block;position:fixed;inset:0;background:#041e1699;backdrop-filter:blur(4px);z-index:19}}
+
+.alert.connection-status{background:rgba(30,65,55,.82);border-color:rgba(176,204,177,.32);color:#cbdac9;box-shadow:none}.connection-status>.text-button{white-space:nowrap;align-self:center;padding:0 8px;font-size:10px}

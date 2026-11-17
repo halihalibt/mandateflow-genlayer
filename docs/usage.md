@@ -23,3 +23,5 @@ Review exact arguments, contract method and account before signing. The UI never
 Public transaction intent/hash records are saved in this browser's local storage to resume monitoring after reload. Signing keys are not saved. If broadcasting returns an unknown outcome, inspect your wallet and explorer before retrying; the application does not automatically resend.
 
 A finalized execution error remains a failed business action even if consensus agreed on that error. An UNCERTAIN scope finding is instead a successful saved business finding. A timeout or unavailable RPC leaves monitoring incomplete, not a fabricated scope decision. A failed finalized-state read offers “Retry record read”; this retries only the getter verification, never the signed transaction.
+
+Temporary chain-read interruptions use a neutral connection-status message. On the first load, summary counts remain unavailable (—) until finalized data is read; an unavailable connection is not shown as an empty collective. Successful reads clear the connection status automatically.
