@@ -11,3 +11,6 @@
 .mobile-paths{display:none}
 @media(max-width:760px){.graph-stage{display:none}.mobile-paths{display:flex;flex-direction:column;margin:6px 0 12px}.mobile-paths>button{display:flex;align-items:center;gap:8px;text-align:left;background:#153b2b33;border:1px solid transparent;border-bottom:1px solid #abc59c22;padding:13px 8px;border-radius:7px}.mobile-paths>button.selected{background:#a3c38d18;border-color:#bed6a855}.mobile-paths>button>span:nth-child(2){display:flex;flex:1;flex-direction:column;min-width:0}.mobile-paths strong{font-size:12px;font-weight:500}.mobile-paths small{font-size:10px;color:#adc6b0;overflow-wrap:anywhere}.mobile-paths .badge{font-size:8px}.graph-route-caption{font-size:10px;line-height:1.7}.table-wrap table{font-size:11px}}
 .graph-node:focus-visible>circle{stroke:#f4e7b2;stroke-width:3;filter:drop-shadow(0 0 7px #e9dfb566)}
+@media(max-width:760px){.intro{overflow:hidden}}
+.sidebar{overflow-y:auto}.sidebar nav,.sidebar-footer{flex-shrink:0}.mobile-scrim{display:none}
+@media(max-width:760px){.mobile-scrim{display:block;position:fixed;inset:0;background:#041e1699;backdrop-filter:blur(4px);z-index:19}}
