@@ -10,6 +10,8 @@ A scope-bound delegation application for small member collectives on GenLayer. M
 
 To review without a wallet, open the application → Proposal detail → Voting results. Select a member to follow their original vote, or open an authorization edge to inspect its frozen scope and quotation anchors. The default example is synthetic governance content with real signatures, consensus, writes and finalized readbacks.
 
+![MandateFlow finalized governance workspace](evidence/desktop.jpg)
+
 ## The problem
 
 Delegating routine maintenance decisions should not authorize an unrelated personnel decision hidden in the same proposal. A delegate should not be able to reassign a vote indefinitely. An organizer should not be able to edit the proposal after members delegated or count a delegation cycle as support.
